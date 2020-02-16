@@ -1,0 +1,2129 @@
+/*共通CSS*/
+body {
+    font-size:18px;
+    width:100%;
+    margin:0px;
+    padding:0px;
+    color: black;
+    background:white;
+    font-family:'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', sans-serif;
+}
+
+
+/*全体右側余白削除*/
+.wrap {
+    overflow: hidden;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li,
+ul {
+    margin: 0px;
+    padding: 0px;
+    font-size: 100%;
+    font-weight: normal;
+}
+
+/*innre共通*/
+.inner {
+    max-width: 1500px;
+    /*サイトの最大幅*/
+}
+
+/*リンク全般CSS*/
+a {
+    color: black;
+    /*リンクテキストの文字色*/
+}
+
+a:hover img{
+    opacity: 0.7;
+}
+
+
+li a:hover {
+    color: white;
+    background-color: blue;
+}
+
+/*タイトル*/
+h1{
+    margin: 0px;                 /* デフォルトCSS打ち消し */
+    position:  relative;        /* 位置調整 */
+    font-weight:800;       /* 文字の太さ調整 */
+    display:  inline-block;     /* インラインブロックにする */
+    padding-top: 30px;          /* 余白指定 */
+    padding-left: 40px;         /* 余白指定 */
+    padding-bottom: 10px;       /* 余白指定 */
+    letter-spacing:10px;
+    font-family: "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
+}
+
+h1:before{
+    content:  '';               /* 空白の要素を作る */
+    background-color: #ffeaac;  /* 背景色指定 */
+    display:  block;            /* ブロック要素にする */
+    position:  absolute;        /* 位置調整 */
+    left:  0;                   /* 位置調整 */
+    height: 100px;               /* 高さ指定 */
+    width: 100px;                /* 幅指定 */
+    border-radius:  50%;        /* 丸くする */
+    top: -0.5rem;                     /* 位置調整 */
+    z-index:  -1;               /* 重なり調整 */
+}
+
+h3 {
+    color:#ff8c00;
+    margin:auto;
+    text-align: center;
+    width:290px;
+    border-bottom: solid 3px skyblue;
+    position: relative;
+}
+
+h3:after {
+    position: absolute;
+    content: " ";
+    display: block;
+    border-bottom: solid 3px #ffc778;
+    bottom: -3px;
+    width: 30%;
+}
+
+
+
+/*ヘッダー画像*/
+header img {
+    width: 150px;
+}
+
+
+/*ヘッダートップCSS*/
+#headerTop{
+    letter-spacing: 0.1rem;
+    font-size: 16px;
+}
+
+#headerTop .headerTopT{
+    position: absolute;
+    right: 3%;
+    top: 7px;
+    display:flex;
+    font-size:17px;
+}
+
+#headerTop .headerTopT p{
+    margin-right: 10px;
+    line-height:40px;
+    font-size: 14px;
+    color:gray;
+}
+
+
+/*いんすた*/
+.insta_btn ,.twitter_btn ,.line_btn{
+    display: inline-block;
+    text-align: center;/*中央揃え*/
+    text-decoration: none;/*下線消す*/
+}
+
+.insta_btn:hover {/*ホバー時*/
+    color:#668ad8;/*文字色*/
+    transition: .5s;/*ゆっくり変化*/
+}
+
+.insta_btn .insta{/*アイコンの背景*/
+    position: relative;/*相対配置*/
+    display: inline-block;
+    width: 36px;/*幅*/
+    height: 36px;/*高さ*/
+    background: -webkit-linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
+    background: linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;/*グラデーション①*/
+    overflow: hidden;/*はみ出た部分を隠す*/
+    border-radius: 13px;/*角丸に*/
+
+}
+
+.insta_btn .insta:before{/*グラデーションを重ねるため*/
+    content: '';
+    position: absolute;/*絶対配置*/
+    top: 23px;/*ずらす*/
+    left: -18px;/*ずらす*/
+    width: 60px;/*グラデーションカバーの幅*/
+    height: 60px;/*グラデーションカバーの高さ*/
+    background: -webkit-radial-gradient(#ffdb2c 10%, rgba(255, 105, 34, 0.65) 55%, rgba(255, 88, 96, 0) 70%);
+    background: radial-gradient(#ffdb2c 10%, rgba(255, 105, 34, 0.65) 55%, rgba(255, 88, 96, 0) 70%);/*グラデーション②*/
+}
+
+.insta_btn .fa-instagram {/*アイコン*/
+    color: #FFF;/*白に*/
+    position: relative;/*z-indexを使うため*/
+    z-index: 2;/*グラデーションより前に*/
+    font-size: 28px;/*アイコンサイズ*/
+    line-height: 36px;/*高さと合わせる*/
+    left:1px;
+}
+
+/*ついったー*/
+.twitter_btn .twitter{
+    position: relative;/*相対配置*/
+    display: inline-block;
+    width: 36px;/*幅*/
+    height: 36px;/*高さ*/
+    background: #00ACEE;
+    overflow: hidden;/*はみ出た部分を隠す*/
+    border-radius: 50%;/*角丸に*/
+}
+
+.twitter_btn .fa-twitter{
+    color: #FFF;/*白に*/
+    position: relative;/*z-indexを使うため*/
+    z-index: 2;/*グラデーションより前に*/
+    font-size: 22px;/*アイコンサイズ*/
+    line-height: 36px;/*高さと合わせる*/
+    left:1px;
+}
+
+/*らいん*/
+.line_btn .line{
+    position: relative;/*相対配置*/
+    display: inline-block;
+    overflow: hidden;/*はみ出た部分を隠す*/
+    top:2px;
+    width: 36px;/*幅*/
+    height: 36px;/*高さ*/
+}
+
+/*なんかすごい芸当*/
+.line_btn .fa-line{
+    display: inline-block;
+    color: #00c300;/*白に*/
+    background: white;
+    position: relative;/*z-indexを使うため*/
+    z-index: 2;/*グラデーションより前に*/
+    font-size: 40px;/*アイコンサイズ*/
+    line-height: 32px;/*高さと合わせる*/
+    left:1px;
+    border-radius: 100%;/*角丸に*/
+}
+
+/*googleフォーム*/
+.form {
+    width: 100%;
+    height: 890px;
+    border:none;
+}
+
+
+
+#headerTop .headerTopB{
+    position: absolute;
+    right: 3%;
+    top: 55px;
+    display:flex; 
+}
+
+#headerTop li {
+    float: left;
+}
+
+#headerTop li + li{
+    border-left: 1px solid #000;
+}
+
+#headerTop a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 0px;
+    margin: 0 10px;
+}
+
+#headerTop .headerTopB{
+    font-size: calc(1rem + ((1vw - 0.8rem) *0.5));/* 可変*/
+}
+/*headerBottomCSS*/
+
+/*ナビゲーション固定*/
+/*スクロールしたら、このCSSを適用し、ナビゲーションバーの位置を固定する*/
+.is-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+}
+/*/ナビゲーション固定*/
+
+.menu{
+    display:flex;
+    justify-content: space-around;
+    font-size:1.2rem;
+    font-size: calc(1.2rem + ((1vw - 0.8rem) *0.5));/* 可変*/
+    margin:auto;
+    margin:0px 0;
+    background-color:#ff8c00;
+    height:50px;
+}
+
+.menu li {
+    /*    font:bold 18px/1.6 Arial, Helvetica, sans-serif;*/
+    text-align: center;
+    float: left;
+    width: 25%; /* グローバルナビ4つの場合 */
+    height: 40px;
+    line-height: 50px;/*テキストのボックスに対する位置*/
+}
+
+.menu h2{
+    color:#ff8c00;
+}
+
+.menu img{
+    width:250px;
+}
+
+.menu li+li{
+    border-left: 1px solid white;
+    height:50px;
+}
+
+.menu li a,
+.menu li {
+    display: block;
+    color: white;
+    letter-spacing:3px;
+}
+
+ul.menu__second-level {
+    visibility: hidden;
+    opacity: 0;
+    z-index: 1;
+}
+
+.menu li:hover,
+.menu li a:hover{
+    background:blue;
+    color:white;
+    text-decoration: none;
+}
+
+.menu__mega li:hover{
+    background:none;
+}
+
+
+
+.menu__second-level li {
+    border-top: 1px solid #111;
+}
+
+.menu__second-level li a:hover {
+    background:none; 
+}
+
+
+/* floatクリア */
+.menu:before,
+.menu:after {
+    content: " ";
+    display: table;
+}
+
+.menu:after {
+    clear: both;
+}
+
+.menu {
+    *zoom: 1;
+}
+
+li.menu__mega ul.menu__second-level {
+    position: absolute;
+    top: 40px;/*スライドする初期位置*/
+    left: 0;
+    width: 100%;
+    list-style: none;
+    color:#ff8c00;
+    background-color:#fff7ee;
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
+    border-bottom:1px solid #000; 
+    margin: auto;
+    padding-left:0px;
+}
+
+/*hoverのときリスト出現*/
+li.menu__mega:hover ul.menu__second-level {
+    top: 50px;/*上から50pxの位置に出現*/
+    visibility: visible;
+    opacity: 1;
+}
+
+/*リストhover時の背景の大きさ*/
+ul.menu__second-level{
+    padding-bottom: 200px;
+    z-index: 10;
+}
+
+ul.menu__second-level li:hover{
+    background-color: none;
+}
+
+li.menu__mega ul.menu__second-level li{
+    border: none;
+}
+
+#menu_b .subTxt{
+    color:#ff8c00;
+}
+
+.carousel-indicators li{
+    margin:-6.5px 10px;
+    border-radius: 50%;
+    height: 15px;
+    width: 15px;
+    background-color: #ff8c00;
+    z-index: 1;
+}
+
+
+/*
+li.menu__mega ul.menu__second-level li+li{
+padding: 0%;
+}
+*/
+
+/*mainEventCSS*/
+#mainEvent .title{
+    background-color: rgba(255,140,0,0.8);
+    border-radius: 0;
+    color:white;
+}
+
+#mainEvent img{
+    border-radius: 0;
+}
+
+#mainEvent {
+    font-size: 15px
+}
+
+
+
+/*md以上の時スマホ用メニュー非表示*/
+#headerBottom-s {
+    display: none;
+}
+
+/*push7用CSS*/
+.push7 {
+    background: #eeac00;
+}
+.push7 a{
+    color: #fff;
+    display:block;
+    padding:10px 0;
+    text-decoration: none;
+    margin-bottom:10px;
+}
+
+
+#news{
+    background:#fff7ee;
+}
+
+#news a{
+    color:#1a0dab;
+}
+
+
+/*Hotevent修正CSS*/
+/*
+#Hotevent {
+background:#fff7ee;
+}
+
+#Hotevent a{
+background:#fff7ee;
+}
+*/
+
+#Hotevent h5 {
+    font:bold 24px/1.6 Arial, Helvetica, sans-serif;
+    color:#ff8c00;
+    text-shadow:1px 1px 0 rgba(255,255,255,1);
+}
+
+#Hotevent h5:first-letter{
+    color:skyblue;
+    font-size:200%;
+}
+
+#Hotevent p{
+    font-size:calc(1.3rem + ((1vw - 0.9rem) *0.5));/* 24px~36pxで可変*/
+}
+
+#ad{
+    background: #fff7ee;
+}
+
+#ad img{
+    width: 250px;
+}
+
+/*
+#acsess{
+background:#fff7ee;
+}
+*/
+/*navigateCSS*/
+#navigate,
+#navigate_mogi{
+    background-color:#fff7ee;
+}
+
+#navigate .mainMap img{
+    width: 45rem;
+    position: relative;
+} 
+
+#navigate .map img{
+    width: 45rem;
+    position: relative;
+}
+
+#navigate button{
+    font:bold 1.08rem Arial, Helvetica, sans-serif;
+    color:white;
+}
+
+/*鬼のインラインCSS*/
+#navigate .souseiNavi button{
+    position: absolute;
+    top:27.8rem;
+    left:18rem;
+}
+
+#navigate .kyoutuNavi button{
+    position: absolute;
+    top:35.4rem;
+    left:20rem;
+}
+
+#navigate .softANavi button{
+    position: absolute;
+    top:20.8rem;
+    left:15.6rem;
+}
+
+#navigate .softBNavi button{
+    position: absolute;
+    top:12.7rem;
+    left:20.2rem;
+}
+
+#navigate .tandaiNavi button{
+    position: absolute;
+    top:35.4rem;
+    left:36rem;
+}
+
+#navigate .kangoNavi button{
+    position: absolute;
+    top:27.8rem;
+    left:40rem;
+}
+
+#navigate .syahukuNavi button{
+    position: absolute;
+    top:20.8rem;
+    left:39.4rem;
+}
+
+#navigate .taiikuNavi button{
+    position: absolute;
+    top:10.8rem;
+    left:13.4rem;
+}
+
+#navigate .gakuseiNavi button{
+    position: absolute;
+    top:5.6rem;
+    left:21rem;
+}
+
+#navigate .stageNavi button{
+    position: absolute;
+    top:12rem;
+    left:35rem;
+}
+
+#navigate .kodoNavi button{
+    position: absolute;
+    top:38rem;
+    left:26rem;
+}
+
+#navigate .sogoNavi button{
+    position: absolute;
+    top:40rem;
+    left:28.7rem;
+}
+
+/*firstday,seconddayのcss*/
+#hurima,
+#obake,
+#artist,
+#kodo1,
+#ganrizer,
+#GF{
+    background-color:#fff7ee
+}
+
+
+
+#hurima .postor img,
+#obake .postor img,
+#kodo1 .postor img,
+#ganrizer .postor img,
+#GF .postor img{
+    width:337.2px;
+}
+
+#hurima .picture img,
+#obake .picture img,
+#kodo .picture img
+#ganrizer .picture img,
+#GF .picture img{
+    width:350px;
+}
+
+#artist .logo img{
+    width:500px;
+}
+
+#artist .human img{
+    width:770px;
+}
+
+
+/*stage.htmlのcss*/
+
+.E_title{
+    background:url(https://peonyqueen.files.wordpress.com/2015/10/cork02.jpg);
+    border:10px solid #ba872c;
+    border-radius: 10px;
+    box-shadow: inset 0 0 0 2px #fff, 0px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.E_title a{
+    color: white;
+}
+
+/*看板部分*/
+.plate{
+    margin-top:40px;
+    border-radius:10px;
+    border:4px solid rgba(225,225,225,0);
+    position:relative;
+}
+
+
+
+/**ネイビー**/
+.navy{
+    background:skyblue;
+    box-shadow: inset 0 0 0 2px #fff, 0px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.green{
+    background:lightgreen;
+    box-shadow: inset 0 0 0 2px #fff, 0px 5px 5px rgba(0, 0, 0, 0.5);
+
+}
+
+.gray{
+    background:lightgray;
+    box-shadow: inset 0 0 0 2px #fff, 0px 5px 5px rgba(0, 0, 0, 0.5);
+
+}
+
+/*文字部分*/
+.plate h4{
+    padding:10px;/*フォントによって位置が変わるので、微調整してください*/
+    margin: 0px;
+    display:block;
+    text-align:center;
+    font-size:40px;
+    text-shadow:inset 0px 1px 1px rgba(0, 0, 0, 0.5);
+    font-family: 'Sacramento', cursive;
+    color:#fff;
+    letter-spacing: 5px;
+}
+
+.plate span{
+    width: 30px;
+    height: 30px;
+    display: block;
+    position: absolute;
+    top: -11%;
+    left: 50%;
+    background:url(../img/timetable/pin.png) no-repeat;
+}
+
+
+#event_stage img{
+    position: absolute;
+    top:-15px;
+    left:50px;
+    width: 130px;
+    z-index: 5;
+}
+
+#event_stage h5{
+    font:bold 1.8rem Arial, Helvetica, sans-serif;
+    color:#ff8c00
+}
+
+#event_stage dt{
+    text-align: center;
+    background-color: skyblue;
+}
+
+#event_stage dd{
+    background-color:#fff7ee;
+    margin: 0;
+}
+
+#event_stage span{
+    font-size:2.3rem;
+}
+
+#event_stage p{
+    margin: 0;
+    font-size: 0.9rem;
+    color:slategray;
+}
+
+/*#event_kodo*/
+#event_kodo img{
+    position: absolute;
+    top:-15px;
+    left:60px;
+    width: 130px;
+    z-index: 5;
+}
+
+#event_kodo h5{
+    font:bold 1.8rem Arial, Helvetica, sans-serif;
+    color:#ff8c00
+}
+
+#event_kodo dt{
+    text-align: center;
+    background-color: lightgreen;
+}
+
+#event_kodo dd{
+    background-color:#fff7ee;
+    margin: 0;
+}
+
+#event_kodo span{
+    font-size:2.3rem;
+}
+
+#event_kodo p{
+    margin: 0;
+    font-size: 0.9rem;
+    color:slategray;
+}
+
+/*#event_tandai*/
+#event_tandai img{
+    position: absolute;
+    top:-15px;
+    left:60px;
+    width: 130px;
+    z-index: 5;
+}
+
+#event_tandai h5{
+    font:bold 1.8rem Arial, Helvetica, sans-serif;
+    color:#ff8c00
+}
+
+#event_tandai dt{
+    text-align: center;
+    background-color: lightgray;
+}
+
+#event_tandai dd{
+    background-color:#fff7ee;
+    margin: 0;
+}
+
+#event_tandai span{
+    font-size:2.3rem;
+}
+
+#event_tandai p{
+    margin: 0;
+    font-size: 0.9rem;
+    color:slategray;
+}
+/*gakunaiCSS*/
+
+#kyoutu1,
+#kyoutu2,
+#kyoutu3,
+#sousei1,
+#soft2,
+#soft4,
+#tandai1,
+#kango1,
+#syahuku2,
+#taiiku2,
+#gakusei2,
+#gakusei3{
+    font-size:15px;
+    background-color:#fff7ee
+}
+
+#kyoutu1 h2,
+#kyoutu2 h2,
+#kyoutu3 h2,
+#sousei1 h2,
+#soft2 h2,
+#soft4 h2,
+#tandai1 h2,
+#kango1 h2,
+#syahuku2 h2,
+#taiiku2 h2,
+#gakusei2 h2,
+#gakusei3 h2{
+    font-size:calc(1.8rem + ((1vw - 0.9rem) *0.5));/* 24px~36pxで可変*/;
+}
+
+#kyoutu1 img,
+#kyoutu2 img,
+#kyoutu3 img,
+#soft4 img,
+#tandai1 img,
+#taiiku2 img,
+#gakusei2 img,
+#gakusei3 img{
+    width:40rem;
+}
+
+#sousei1 img,
+#soft2 img,
+#kango1 img,
+#syahuku2 img{
+    width:60rem;
+}
+
+#kyoutu2_sousaku,
+#taiiku_sousaku{
+    font-size:15px;
+    background-color:#fff7ee
+}
+
+#kyoutu2_sousaku h2,
+#taiiku_sousaku h2{
+    font-size:calc(1.8rem + ((1vw - 0.9rem) *0.5));/* 24px~36pxで可変*/;
+}
+
+
+#kyoutu2_sousaku img,
+#taiiku_sousaku img{
+    width:40rem;
+}
+
+/*news.html用CSS*/
+#newsE{
+    font-size:15px;
+    background-color:#fff7ee
+}
+
+#newsE h2{
+    font-size:calc(1.8rem + ((1vw - 0.9rem) *0.5));/* 24px~36pxで可変*/;
+}
+
+#access,
+#info,
+#park,
+#bus{
+    background:#fff7ee;
+}
+
+#info img{
+    width:9rem;
+}
+
+#park .parking img{
+    width:30rem;
+}
+
+#bus .bus img{
+    width:20rem;
+}
+
+/*フリマお申込みCSS*/
+#hurima_apply{
+    background-color: #fff7ee;
+}
+
+#hurima_apply_Note{
+    background-color: #fff7ee;
+}
+
+#hurima_apply_Note img{
+    width: 400px;
+}
+
+/*フリマ応募*/
+.btn-square {
+    display: inline-block;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    background: #00a000;/*ボタン色*/
+    color: #FFF;
+    border-bottom: solid 4px #3c6232;
+    border-radius: 3px;
+}
+
+.btn-square:hover{
+    text-decoration: none;
+    color:white;
+    opacity: 0.7;
+}
+
+.btn-square:active {
+    /*ボタンを押したとき*/
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);/*下に動く*/
+    border-bottom: none;/*線を消す*/
+}
+
+/*ステージ、講堂応募*/
+#stage_apply,
+#kodo_apply{
+    background: #fff7ee
+}
+
+#stage_apply h2,
+#kodo_apply h2{
+    font-size:calc(1.8rem + ((1vw - 0.9rem) *0.5));
+}
+
+.btn-gradient-3d-orange {
+    display: inline-block;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    border-radius: 4px;
+    color: #ffffff;
+    background-image: linear-gradient(45deg, #FFC107 0%, #ff8b5f 100%);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+    border-bottom: solid 3px #c58668;
+}
+
+.btn-gradient-3d-orange p{
+    margin:0px;
+    font:bold 20px/1.6 Arial, Helvetica, sans-serif;
+}
+
+.btn-gradient-3d-orange:active {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+    border-bottom: none;
+}
+
+.btn-gradient-3d-orange:hover{
+    text-decoration: none;
+    color:white;
+    opacity: 0.7;
+}
+
+#gakunai,
+#mogiten,
+#sosiki{
+    background:#fff7ee;
+}
+
+#gakunai img,
+#mogiten img{
+    width: 400px;
+}
+
+/*鷲風祭とは？CSS*/
+#syuhu,
+#thema,
+#hu{
+    background: #fff7ee;
+}
+
+#syuhu img{
+    width:350px;
+}
+
+#thema img{
+    width:380px;
+}
+
+#hu img{
+    width:700px;
+}
+
+/*他大学大学祭CSS*/
+#other_campus,
+#sponsor{
+    background:#fff7ee;
+}
+
+#other_campus a{
+    color:blue;
+}
+
+#other_campus .head-s a{
+    color: white;
+}
+
+
+#other_campus .head,
+#other_campus .head-s{
+    background: #ff8c00;
+    color:white;
+}
+
+/*footerCSS*/
+footer ul{
+    font-size: 15px;
+    padding-left:0px; 
+    margin-top:15px; 
+}
+
+footer li{
+    margin-bottom: 5px;
+}
+
+footer a{
+    color: white;
+}
+
+footer a:hover{
+    background: none;
+}
+
+/*画面幅1200px以下の設定
+------------------------------------------------------------------------------------------------------------------------------------------*/
+@media screen and (max-width:1200px) {
+    /*メニューバー*/
+    .menu{
+        font-size: calc(1.0rem + ((1vw - 0.9rem) *0.5));/* 24px~36pxで可変*/
+        height: 40px;
+    }
+    .menu li{
+        line-height: 40px;
+    }
+    .menu li+li{
+        height:40px;
+    }
+    li.menu__mega ul.menu__second-level {
+        top: 30px;/*スライドする初期位置*/
+    }
+
+    /*hoverのときリスト出現*/
+    li.menu__mega:hover ul.menu__second-level {
+        top: 40px;/*上から40pxの位置に出現*/
+    }
+
+    /*navi大きさ(総合政策学部棟etc...)*/
+    #navigate button{
+        font:bold 1.18rem Arial, Helvetica, sans-serif;
+        color:white;
+    }
+
+
+    /*navi位置調整(総合政策学部棟etc...)*/
+    #navigate .souseiNavi button{
+        position: absolute;
+        top:27.8rem;
+        left:13rem;
+    }
+
+    #navigate .kyoutuNavi button{
+        position: absolute;
+        top:35.4rem;
+        left:14rem;
+    }
+
+    #navigate .softANavi button{
+        position: absolute;
+        top:20.8rem;
+        left:10rem;
+    }
+
+    #navigate .softBNavi button{
+        position: absolute;
+        top:12.7rem;
+        left:14.5rem;
+        font:bold 1.08rem Arial, Helvetica, sans-serif;
+    }
+
+    #navigate .tandaiNavi button{
+        position: absolute;
+        top:35.4rem;
+        left:30.5rem;
+    }
+
+    #navigate .kangoNavi button{
+        position: absolute;
+        top:27.8rem;
+        left:35rem;
+    }
+
+    #navigate .syahukuNavi button{
+        position: absolute;
+        top:20.8rem;
+        left:34rem;
+    }
+
+    #navigate .taiikuNavi button{
+        position: absolute;
+        top:10.8rem;
+        left:7.4rem;
+    }
+
+    #navigate .gakuseiNavi button{
+        position: absolute;
+        top:5.6rem;
+        left:15.5rem;
+        font:bold 1.1rem Arial, Helvetica, sans-serif;
+    }
+
+    #navigate .stageNavi button{
+        position: absolute;
+        top:12rem;
+        left:29rem;
+    }
+
+    #navigate .kodoNavi button{
+        position: absolute;
+        top:38rem;
+        left:20rem;
+    }
+
+    #navigate .sogoNavi button{
+        position: absolute;
+        top:40rem;
+        left:22.9rem;
+    }
+
+
+
+}
+/*画面幅1024px以下の設定
+------------------------------------------------------------------------------------------------------------------------------------------*/
+@media screen and (max-width:1024px) {
+    @keyframes menu1 {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    #headerBottom-s {
+        display: block;
+        overflow: scroll;
+        position: fixed;
+        top: 90px;
+        /*上から65pxの場所に配置*/
+        width: 100%;
+        z-index: 100;
+        animation-name: menu1;
+        /*上のkeyframesの名前*/
+        animation-duration: 0.5S;
+        /*アニメーションの実行時間。0.5秒。*/
+        animation-fill-mode: both;
+        /*アニメーションの完了後、最後のキーフレームを維持する*/
+    }
+
+    /*左右 上下 / 大きさ*/
+    #headerBottom-s div.category{
+        display: block;
+        text-decoration: none;
+        cursor:pointer;
+        height: 60px;
+        /*高さ。下のpadding-top(15)と合計して「100」になるようにする。*/
+        padding-top: 15px;
+        /*上に空ける余白*/
+        padding-left: 40px;
+        /*左に空ける余白。背景用アイコンとの距離をここで調整。*/
+        /*
+        border-top: 1px solid #fff;
+        下の線の幅、線種、色
+        */
+        font-size: 20px;
+        /*文字サイズ*/
+        color: white;
+        /*文字色*/
+        z-index: 100;
+        border-bottom: 1px solid white;
+        background:#ff8c00 url("../img/arrow/ArrowDown.png") no-repeat 93.5% 26px / 20px;
+    }
+
+    #headerBottom-s div.open{
+        background:#ff8c00 url("../img/arrow/ArrowUp.png") no-repeat 93.5% 26px / 20px;
+    }
+
+
+    #headerBottom-s div.categoryU{
+        display: block;
+        text-decoration: none;
+        cursor:pointer;
+        height: 45px;
+        /*高さ。下のpadding-top(15)と合計して「100」になるようにする。*/
+        padding-top: 11px;
+        /*上に空ける余白*/
+        padding-left: 42px;
+        /*左に空ける余白。背景用アイコンとの距離をここで調整。*/
+        /*
+        border-top: 1px solid #fff;
+        下の線の幅、線種、色
+        */
+        font-size: 17px;
+        /*文字サイズ*/
+        color: white;
+        /*文字色*/
+        z-index: 100;
+        border-bottom: 1px solid white;
+        background:black url("../img/arrow/ArrowRightW.png") no-repeat 93% 15px / 10px; 
+
+    }
+
+    #headerBottom-s div.categorySNS{
+        display: block;
+        text-decoration: none;
+        cursor:pointer;
+        height: 98px;
+        /*高さ。下のpadding-top(15)と合計して「100」になるようにする。*/
+        padding-top: 0px;
+        /*上に空ける余白*/
+        text-align: center;
+        /*左に空ける余白。背景用アイコンとの距離をここで調整。*/
+        font-size: 17px;
+        /*文字サイズ*/
+        color: white;
+        /*文字色*/
+        z-index: 100;
+        border-bottom: 1px solid white;
+        background: black;
+        font-size: 17px;
+    }
+
+    #headerBottom-s div.categorySNS a{
+        margin:0 20px;
+    }
+
+    #headerBottom-s div.categorySNS p{
+        margin:0 20px;
+    }
+
+    #headerBottom-s #fes{
+        border-top: 1px solid white;
+        background:#ff8c00;
+    }
+
+    /* ドロップダウンリスト中身CSS*/
+    #headerBottom-s ul.menu1 a{
+        color:#ff8c00;
+        background:white url("../img/arrow/ArrowRight.png") no-repeat 93% 17px / 10px;
+        display: block;
+        height: 35px;
+        line-height: 35px;
+        padding-bottom:40px;
+        padding-top:10px;
+        padding-left: 80px;
+        border-bottom: 1px solid #ff8c00;
+    }
+
+    #headerBottom-s ul.menu1 a:hover{
+        background-color: blue;
+        text-decoration: none;
+    }
+
+
+    #headerTop {
+        display: none;
+    }
+
+    .menu {
+        display: none
+    }
+
+    /*３本バーアイコン設定
+    ---------------------------------------------------------------------------*/
+    /*３本バーブロック*/
+    #menubar_hdr {
+        display: block;
+        position: fixed;
+        top: 25px;
+        /*上から28pxの場所に配置*/
+        right: 5%;
+        /*左から3%の場所に配置*/
+        z-index: 10;
+    }
+
+    /*アイコン共通設定*/
+    #menubar_hdr.close,
+    #menubar_hdr.open {
+        width: 50px;
+        /*幅*/
+        height: 50px;
+        /*高さ*/
+    }
+
+    /*三本バーアイコン*/
+    #menubar_hdr.close {
+        /*画像上半分(52px表示)*/
+        background:url(../img/icon_menu.png) no-repeat center top/52px;
+        opacity: 1;
+    }
+
+    /*閉じるアイコン*/
+    #menubar_hdr.open {
+        /*画像下半分(52px表示)*/
+        background:url(../img/icon_menu.png) no-repeat center bottom/50px;
+    }
+
+
+
+
+}
+/*画面幅992px以下の設定
+------------------------------------------------------------------------------------------------------------------------------------------*/
+@media screen and (max-width:992px) {
+
+    #headerBottom-s div.category{
+        background:#ff8c00 url("../img/arrow/ArrowDown.png") no-repeat 92.8% 26px / 20px;
+    }
+
+    #headerBottom-s div.open{
+        background:#ff8c00 url("../img/arrow/ArrowUp.png") no-repeat 92.8% 26px / 20px;
+    }
+
+
+    #headerBottom-s div.categoryU{
+        background:black url("../img/arrow/ArrowRightW.png") no-repeat 92.5% 15px / 10px; 
+
+    }
+
+    /* ドロップダウンリスト中身CSS*/
+    #headerBottom-s ul.menu1 a{
+        background:white url("../img/arrow/ArrowRight.png") no-repeat 92.5% 17px / 10px;
+    }
+
+    /*総合政策学部棟etc...の大きさ*/
+    #navigate button{
+        font:bold 1.12rem Arial, Helvetica, sans-serif;
+        color:white;
+    }
+
+    /*navi位置調整(総合政策学部棟etc...)*/
+    #navigate .souseiNavi button{
+        position: absolute;
+        top:24.8rem;
+        left:7rem;
+    }
+
+    #navigate .kyoutuNavi button{
+        position: absolute;
+        top:31.4rem;
+        left:8rem;
+    }
+
+    #navigate .softANavi button{
+        position: absolute;
+        top:18.4rem;
+        left:3.7rem;
+    }
+
+    #navigate .softBNavi button{
+        position: absolute;
+        top:11.2rem;
+        left:8.2rem;
+    }
+
+    #navigate .tandaiNavi button{
+        position: absolute;
+        top:31.5rem;
+        left:22.3rem;
+    }
+
+    #navigate .kangoNavi button{
+        position: absolute;
+        top:24.5rem;
+        left:26.5rem;
+    }
+
+    #navigate .syahukuNavi button{
+        position: absolute;
+        top:18.3rem;
+        left:25rem;
+    }
+
+    #navigate .taiikuNavi button{
+        position: absolute;
+        top:10rem;
+        left:2rem;
+    }
+
+    #navigate .gakuseiNavi button{
+        position: absolute;
+        top:5rem;
+        left:9.2rem;
+        font:bold 1.0rem Arial, Helvetica, sans-serif;
+    }
+
+    #navigate .stageNavi button{
+        position: absolute;
+        top:10.5rem;
+        left:21.5rem;
+    }
+
+    #navigate .kodoNavi button{
+        position: absolute;
+        top:33.7rem;
+        left:13.5rem;
+    }
+
+    #navigate .sogoNavi button{
+        position: absolute;
+        top:35.2rem;
+        left:15.8rem;
+    }
+
+
+
+    /*モーダル内画像サイズ*/
+    #navigate .map img{
+        width: 28rem;
+        position: relative;
+    }
+
+    #navigate .softANavi img,
+    #navigate .kangoNavi img,
+    #navigate .syahukuNavi img,{
+        width: 25rem;
+        position: relative;
+    }
+
+    /*タイムテーブル用*/
+    #event_stage{
+        font-size:16px;
+    }
+    #event_stage h5{
+        font:bold 1.4rem Arial, Helvetica, sans-serif;
+        color:#ff8c00
+    }
+
+
+    #event_stage span{
+        font-size:1.2rem;
+    }
+
+    #event_stage p{
+        font-size: 0.8rem;    
+    }
+
+    /*講堂イベント*/
+    #event_kodo{
+        font-size:16px;
+    }
+
+    #event_kodo h5{
+        font:bold 1.4rem Arial, Helvetica, sans-serif;
+        color:#ff8c00
+    }
+
+
+    #event_kodo span{
+        font-size:1.2rem;
+    }
+
+    #event_stage p{
+        font-size: 0.8rem;
+    }
+
+    /*短大棟イベント*/
+    #event_tandai{
+        font-size:16px;
+    }
+
+    #event_tandai h5{
+        font:bold 1.4rem Arial, Helvetica, sans-serif;
+        color:#ff8c00
+    }
+
+
+    #event_tandai span{
+        font-size:1.2rem;
+    }
+
+    #event_tandai p{
+        font-size: 0.8rem;
+    }
+
+
+
+}
+/*画面幅768px以下の設定
+------------------------------------------------------------------------------------------------------------------------------------------*/
+@media screen and (max-width:767px) {
+    /*スマホ用メニューバー*/
+
+
+    /*タイトル*/
+    h1{
+        padding-top: 30px;          /* 余白指定 */
+        padding-left: 15px;         /* 余白指定 */
+        padding-bottom: 0px;       /* 余白指定 */
+        letter-spacing:3px;
+    }
+
+    h1:before{
+        height: 75px;               /* 高さ指定 */
+        width: 75px;                /* 幅指定 */   
+        top: 0.3rem;                     /* 位置調整 */       
+    }
+
+    /*サブタイトル*/
+    h3{
+        width:260px;
+    }
+
+    #headerBottom-s div.category{
+        background:#ff8c00 url("../img/arrow/ArrowDown.png") no-repeat 90.5% 26px / 20px;
+    }
+
+    #headerBottom-s div.open{
+        background:#ff8c00 url("../img/arrow/ArrowUp.png") no-repeat 90.5% 26px / 20px;
+    }
+
+
+    #headerBottom-s div.categoryU{
+        background:black url("../img/arrow/ArrowRightW.png") no-repeat 89.5% 15px / 10px; 
+
+    }
+
+    /* ドロップダウンリスト中身CSS*/
+    #headerBottom-s ul.menu1 a{
+        background:white url("../img/arrow/ArrowRight.png") no-repeat 89.5% 17px / 10px;
+    }
+
+    /*カルーセル位置*/
+    .carousel-indicators li{
+        margin:-20px 10px;
+    }
+
+
+    /*総合政策学部棟etc...の大きさ*/
+    #navigate button{
+        font:bold 0.9rem Arial, Helvetica, sans-serif;
+        color:white;
+    }
+
+    /*navi位置調整(総合政策学部棟etc...)*/
+    #navigate .souseiNavi button{
+        position: absolute;
+        top:18.5rem;
+        left:5rem;
+    }
+
+    #navigate .kyoutuNavi button{
+        position: absolute;
+        top:23.7rem;
+        left:6rem;
+    }
+
+    #navigate .softANavi button{
+        position: absolute;
+        top:13.8rem;
+        left:2.3rem;
+    }
+
+    #navigate .softBNavi button{
+        position: absolute;
+        top:8.4rem;
+        left:6.2rem;
+        font:bold 0.8rem Arial, Helvetica, sans-serif;
+    }
+
+    #navigate .tandaiNavi button{
+        position: absolute;
+        top:23.6rem;
+        left:16.7rem;
+    }
+
+    #navigate .kangoNavi button{
+        position: absolute;
+        top:18.5rem;
+        left:20rem;
+    }
+
+    #navigate .syahukuNavi button{
+        position: absolute;
+        top:13.8rem;
+        left:19rem;
+    }
+
+    #navigate .taiikuNavi button{
+        position: absolute;
+        top:7rem;
+        left:1.5rem;
+    }
+
+    #navigate .gakuseiNavi button{
+        position: absolute;
+        top:3.7rem;
+        left:7rem;
+        font:bold 0.75rem Arial, Helvetica, sans-serif;
+    }
+
+    #navigate .stageNavi button{
+        position: absolute;
+        top:7.9rem;
+        left:16.1rem;
+    }
+
+    #navigate .kodoNavi button{
+        position: absolute;
+        top:25.3rem;
+        left:10.5rem;
+    }
+
+    #navigate .sogoNavi button{
+        position: absolute;
+        top:26.7rem;
+        left:11.8rem;
+    }
+
+    /*モーダル内画像サイズ*/
+    #navigate .map img{
+        width: 22rem;
+        position: relative;
+    }
+
+    /*タイムテーブル用*/
+    #event_stage{
+        font-size:12px;
+    }
+    #event_stage h5{
+        font:bold 1.15rem Arial, Helvetica, sans-serif;
+        color:#ff8c00
+    }
+
+
+    #event_stage span{
+        font-size:1.2rem;
+    }
+
+    #event_stage p{
+        font-size: 0.6rem;
+    }
+
+
+
+    #event_kodo{
+        font-size:12px;
+    }
+
+    #event_kodo h5{
+        font:bold 1.15rem Arial, Helvetica, sans-serif;
+        color:#ff8c00
+    }
+
+
+    #event_kodo span{
+        font-size:1.2rem;
+    }
+
+    #event_kodo p{
+        font-size: 0.6rem;
+    }
+
+
+    #event_tandai{
+        font-size:12px;
+    }
+
+    #event_tandai h5{
+        font:bold 1.15rem Arial, Helvetica, sans-serif;
+        color:#ff8c00
+    }
+
+
+    #event_tandai span{
+        font-size:1.2rem;
+    }
+
+    #event_tandai p{
+        font-size: 0.6rem;
+    }
+    /*/タイムテーブル用*/
+
+
+
+
+}
+
+/*画面幅414px以下の設定
+------------------------------------------------------------------------------------------------------------------------------------------*/
+@media screen and (max-width:415px) {
+    /*総合政策学部棟etc...の大きさ*/
+    #navigate button{
+        font:bold 0.64rem Arial, Helvetica, sans-serif;
+        color:white;
+    }
+
+    /*navi位置調整(総合政策学部棟etc...)*/
+    #navigate .souseiNavi button{
+        position: absolute;
+        top:13.7rem;
+        left:3.8rem;
+    }
+
+    #navigate .kyoutuNavi button{
+        position: absolute;
+        top:17.4rem;
+        left:4.5rem;
+    }
+
+    #navigate .softANavi button{
+        position: absolute;
+        top:10.1rem;
+        left:2.0rem;
+    }
+
+    #navigate .softBNavi button{
+        position: absolute;
+        top:6.2rem;
+        left:5rem;
+        font:bold 0.2rem Arial, Helvetica, sans-serif;
+    }
+
+    #navigate .tandaiNavi button{
+        position: absolute;
+        top:17.4rem;
+        left:12.5rem;
+    }
+
+    #navigate .kangoNavi button{
+        position: absolute;
+        top:13.6rem;
+        left:15rem;
+    }
+
+    #navigate .syahukuNavi button{
+        position: absolute;
+        top:10.1rem;
+        left:14.2rem;
+    }
+
+    #navigate .taiikuNavi button{
+        position: absolute;
+        top:5.1rem;
+        left:1.1rem;
+    }
+
+    #navigate .gakuseiNavi button{
+        position: absolute;
+        top:2.5rem;
+        left:5.1rem;
+        font:bold 0.6rem Arial, Helvetica, sans-serif;
+    }
+
+    #navigate .stageNavi button{
+        position: absolute;
+        top:5.7rem;
+        left:12rem;
+    }
+
+    #navigate .kodoNavi button{
+        position: absolute;
+        top:18.6rem;
+        left:7.5rem;
+    }
+
+    #navigate .sogoNavi button{
+        position: absolute;
+        top:19.6rem;
+        left:8.95rem;
+    }
+
+    #navigate a{
+        font-size:0.7rem;
+    }
+
+}
+
+/*画面幅375px以下の設定
+------------------------------------------------------------------------------------------------------------------------------------------*/
+@media screen and (max-width:376px) {
+    /*総合政策学部棟etc...の大きさ*/
+    #navigate button{
+        font:bold 0.64rem Arial, Helvetica, sans-serif;
+        color:white;
+    }
+
+    /*navi位置調整(総合政策学部棟etc...)*/
+    #navigate .souseiNavi button{
+        position: absolute;
+        top:12rem;
+        left:3rem;
+    }
+
+    #navigate .kyoutuNavi button{
+        position: absolute;
+        top:15.4rem;
+        left:4rem;
+    }
+
+    #navigate .softANavi button{
+        position: absolute;
+        font:bold 0.59rem Arial, Helvetica, sans-serif;
+        top:9rem;
+        left:1.57rem;
+    }
+
+    #navigate .softBNavi button{
+        position: absolute;
+        top:5.4rem;
+        left:4.3rem;
+        font:bold 0.2rem Arial, Helvetica, sans-serif;
+    }
+
+    #navigate .tandaiNavi button{
+        position: absolute;
+        top:15.4rem;
+        left:11rem;
+        font:bold 0.6rem Arial, Helvetica, sans-serif;
+    }
+
+    #navigate .kangoNavi button{
+        position: absolute;
+        top:12rem;
+        left:13rem;
+    }
+
+    #navigate .syahukuNavi button{
+        position: absolute;
+        top:8.9rem;
+        left:12.5rem;
+    }
+
+    #navigate .taiikuNavi button{
+        position: absolute;
+        top:4.5rem;
+        left:1.1rem;
+    }
+
+    #navigate .gakuseiNavi button{
+        position: absolute;
+        top:2.2rem;
+        left:4.6rem;
+        font:bold 0.5rem Arial, Helvetica, sans-serif;
+    }
+
+    #navigate .stageNavi button{
+        position: absolute;
+        top:5rem;
+        left:10.57rem;
+    }
+
+    #navigate .kodoNavi button{
+        position: absolute;
+        top:16.4rem;
+        left:6.7rem;
+    }
+
+    #navigate .sogoNavi button{
+        position: absolute;
+        top:17.4rem;
+        left:7.8rem;
+    }
+
+
+
+}
+
+/*画面幅361px以下の設定
+------------------------------------------------------------------------------------------------------------------------------------------*/
+@media screen and (max-width:361px) {
+
+    /*Hotイベントイベント名の文字の大きさ*/
+    #Hotevent h5 {
+        font:bold 23px/1.6 Arial, Helvetica, sans-serif;
+    }
+
+    /*各棟マップ大きさ*/
+    #navigate .map img{
+        width: 21rem;
+        position: relative;
+    }
+
+    /*総合政策学部棟etc...の大きさ*/
+    #navigate button{
+        font:bold 0.64rem Arial, Helvetica, sans-serif;
+        color:white;
+    }
+
+    /*navi位置調整(総合政策学部棟etc...)*/
+    #navigate .souseiNavi button{
+        position: absolute;
+        top:11.5rem;
+        left:3rem;
+    }
+
+    #navigate .kyoutuNavi button{
+        position: absolute;
+        top:14.6rem;
+        left:4rem;
+    }
+
+    #navigate .softANavi button{
+        position: absolute;
+        font:bold 0.56rem Arial, Helvetica, sans-serif;
+        top:8.5rem;
+        left:1.47rem;
+    }
+
+    #navigate .softBNavi button{
+        position: absolute;
+        top:5.1rem;
+        left:4rem;
+        font:bold 0.1rem Arial, Helvetica, sans-serif;
+    }
+
+    #navigate .tandaiNavi button{
+        position: absolute;
+        top:14.7rem;
+        left:10.6rem;
+        font:bold 0.56rem Arial, Helvetica, sans-serif;
+    }
+
+    #navigate .kangoNavi button{
+        position: absolute;
+        top:11.5rem;
+        left:12.5rem;
+    }
+
+    #navigate .syahukuNavi button{
+        position: absolute;
+        top:8.5rem;
+        left:11.7rem;
+    }
+
+    #navigate .taiikuNavi button{
+        position: absolute;
+        top:4.5rem;
+        left:0.9rem;
+    }
+
+    #navigate .gakuseiNavi button{
+        position: absolute;
+        top:2.2rem;
+        left:4.3rem;
+        font:bold 0.5rem Arial, Helvetica, sans-serif;
+    }
+
+    #navigate .stageNavi button{
+        position: absolute;
+        top:4.7rem;
+        left:10rem;
+    }
+
+    #navigate .kodoNavi button{
+        position: absolute;
+        top:15.7rem;
+        left:6.4rem;
+    }
+
+    #navigate .sogoNavi button{
+        position: absolute;
+        top:16.5rem;
+        left:7.4rem;
+    }
+
+
+}
+
+
+
+/*画面幅321px以下の設定
+------------------------------------------------------------------------------------------------------------------------------------------*/
+@media screen and (max-width:321px) {
+
+    /*タイトル*/
+    h1{
+        padding-top: 10px;          /* 余白指定 */
+        padding-left: 0px;         /* 余白指定 */
+        padding-bottom: 0px;       /* 余白指定 */
+        letter-spacing:4px;
+        left:10px;
+    }
+
+    h1:before{
+        height: 65px;               /* 高さ指定 */
+        width: 65px;                /* 幅指定 */   
+        top: 0rem;                     /* 位置調整 */
+        left: -1rem;
+    }
+
+    /*Hotイベントイベント名の文字の大きさ*/
+    #Hotevent h5 {
+        font:bold 19px/1.6 Arial, Helvetica, sans-serif;
+    }
+
+    /*総合政策学部棟etc...の大きさ*/
+    #navigate button{
+        font:bold 0.64rem Arial, Helvetica, sans-serif;
+        color:white;
+    }
+
+    /*navi位置調整(総合政策学部棟etc...)*/
+    #navigate .souseiNavi button{
+        position: absolute;
+        top:9.8rem;
+        left:2.1rem;
+    }
+
+    #navigate .kyoutuNavi button{
+        position: absolute;
+        top:12.6rem;
+        left:3rem;
+    }
+
+    #navigate .softANavi button{
+        position: absolute;
+        font:bold 0.5rem Arial, Helvetica, sans-serif;
+        top:7.3rem;
+        left:1.3rem;
+    }
+
+    #navigate .softBNavi button{
+        position: absolute;
+        top:4.3rem;
+        left:3.5rem;
+        font:bold 0.1rem Arial, Helvetica, sans-serif;
+    }
+
+    #navigate .tandaiNavi button{
+        position: absolute;
+        top:12.7rem;
+        left:9rem;
+        font:bold 0.53rem Arial, Helvetica, sans-serif;
+    }
+
+    #navigate .kangoNavi button{
+        position: absolute;
+        top:9.8rem;
+        left:10.5rem;
+    }
+
+    #navigate .syahukuNavi button{
+        position: absolute;
+        top:7.2rem;
+        left:9.9rem;
+    }
+
+    #navigate .taiikuNavi button{
+        position: absolute;
+        top:3.7rem;
+        left:0.6rem;
+    }
+
+    #navigate .gakuseiNavi button{
+        position: absolute;
+        top:1.7rem;
+        left:3.5rem;
+        font:bold 0.5rem Arial, Helvetica, sans-serif;
+    }
+
+    #navigate .stageNavi button{
+        position: absolute;
+        top:4.1rem;
+        left:8.8rem;
+        font:bold 0.5rem Arial, Helvetica, sans-serif;
+    }
+
+    #navigate .kodoNavi button{
+        position: absolute;
+        top:13.5rem;
+        left:5.5rem;
+        font:bold 0.55rem Arial, Helvetica, sans-serif;
+    }
+
+    #navigate .sogoNavi button{
+        position: absolute;
+        top:14.3rem;
+        left:6.3rem;
+        ont:bold 0.55rem Arial, Helvetica, sans-serif;
+    }
+
+    /*モーダル内画像サイズ*/
+    #navigate .map img{
+        width: 16rem;
+        position: relative;
+    }
+
+    /*タイムテーブル用*/
+    #event_stage{
+        font-size:10px;
+    }
+    #event_stage h5{
+        font:bold 1.0rem Arial, Helvetica, sans-serif;
+        color:#ff8c00
+    }
+
+
+    #event_stage span{
+        font-size:1.0rem;
+    }
+
+    #event_stage p{
+        font-size: 0.5rem;
+    }
+
+
+
+    #event_kodo{
+        font-size:10px;
+    }
+
+    #event_kodo h5{
+        font:bold 1.0rem Arial, Helvetica, sans-serif;
+        color:#ff8c00
+    }
+
+
+    #event_kodo span{
+        font-size:1.0rem;
+    }
+
+    #event_kodo p{
+        font-size: 0.5rem;
+    }
+    /*/タイムテーブル用*/
+
+
+
+}

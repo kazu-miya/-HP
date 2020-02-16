@@ -1,0 +1,1761 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-89940209-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-89940209-1');
+    </script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- 追加CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <!--追加js-->
+    <script src="js/openclose.js"></script>
+    <!--Font Awsome追加-->
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <!--追加jQUery-->
+    <script src="js/jquery-3.3.1.slim.min.js"></script>
+    <script src="js/jquery-1.6.min.js"></script>
+    <!-- jQueryが共存するための対策。var1.6は「$16」で、var3.3.1は「$」で使用可能-->
+    <script type="text/javascript">
+        var $16 = $.noConflict(true);
+        (function($) {
+            $(function() {
+                //メニューを最初に全て隠す
+                $("ul.menu1").hide();
+                //クリックされたときクリックした以外のメニューが開かれていた場合閉じる。また、現在開いているメニューをクリックした場合も隠す
+                $("div.category").click(function() {
+                    $("ul.menu1").slideUp();
+                    $("div.category").removeClass("open");
+                    //もしクリックしたところのcssがdisplay:none;のときshowを実行
+                    if ($("+ul", this).css("display") == "none") {
+                        $("+ul", this).slideDown();
+                        $(this).addClass("open")
+                    }
+                });
+            });
+        })($16);
+    </script>
+
+
+    <script>
+        //nav固定用
+        $(function() {
+            $(window).scroll(function() {
+
+                if ($(this).scrollTop() > 10) {
+                    $('#articles-scroll').addClass('is-fixed');
+                } else {
+                    $('#articles-scroll').removeClass('is-fixed');
+                }
+            });
+        });
+    </script>
+
+
+    <title>岩手県立大学 大学祭</title>
+</head>
+
+<body>
+    <!-- ヘッダー -->
+    <div class="wrap mt-4">
+        <header>
+            <div class="container-fluid ml-0 ml-xl-5 ml-lg-3 mb-md-3">
+                <a href="index.html"><img src="img/festalogo.png" class="img img-fluid" alt="festalogo"></a>
+                <div id="headerTop">
+                    <div class="headerTopT">
+                        <p>公式SNS</p>
+                        <a href="https://www.instagram.com/festa_iwate_pu/" target="_blank" class="insta_btn">
+                            <span class="insta">
+                                <i class="fab fa-instagram"></i>
+                            </span>
+                        </a>
+                        <a href="https://twitter.com/festa_iwate_pu" target="_blank" class="twitter_btn">
+                            <span class="twitter">
+                                <i class="fab fa-twitter"></i>
+                            </span>
+                        </a>
+                        <!--
+<a href="" class="line_btn">
+<span class="line">
+<i class="fab fa-line"></i>
+</span>
+</a>
+-->
+                    </div>
+                    <div class="headerTopB">
+                        <ul>
+                            <li><a href="contact.html">お問い合わせ</a></li>
+                            <li><a href="question.html">よくあるご質問</a></li>
+                        </ul>
+                        <!--検索フォーム作りかけ-->
+                        <!--
+<form action="/search-result/">
+<input id="search-input" placeholder="1つキーワードを入力" type="text" name="search-key">
+<input id="search-buttom" class="fas" type="submit" value="" method="get">
+</form>
+-->
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+        <!--メニューバー-->
+        <div id="articles-scroll">
+            <div id="menu_b">
+                <ul class="menu sticky-top" style="z-index: 100;">
+
+                    <li class="menu__mega">
+                        <a href="index.html"><i class="fas fa-home mr-xl-3"></i>ホーム</a>
+                    </li>
+
+                    <li class="menu__mega">
+                        <i class="fas fa-map-marked-alt mr-xl-3"></i>会場案内<i class="fas fa-angle-down ml-xl-2"></i>
+                        <ul class="menu__second-level row">
+
+                            <li class="col-12 text-left ml-xl-5 ml-lg-3 my-3">
+                                <h2>●会場案内TOP</h2>
+                            </li>
+
+                            <li class="col-md-3">
+                                <div class="figure">
+                                    <a href="navi.html">
+                                        <img src="img/icon/konai_map.png" alt="" class="figure-img img-fluid">
+                                        <figcaption class="figure-caption subTxt">校内マップ</figcaption>
+                                    </a>
+                                </div>
+                            </li>
+
+                            <li class="col-md-3">
+                                <div class="figure">
+                                    <a href="mogi_navi.html">
+                                        <img src="img/icon/mogi_map.png" alt="" class="figure-img img-fluid">
+                                        <figcaption class="figure-caption subTxt">模擬店マップ</figcaption>
+                                    </a>
+                                </div>
+                            </li>
+
+                            <li class="col-md-3">
+                                <div class="figure">
+                                    <a href="firstday.html">
+                                        <img src="img/icon/1day.png" alt="" class="figure-img img-fluid">
+                                        <figcaption class="figure-caption subTxt">１日目/両日イベント</figcaption>
+                                    </a>
+                                </div>
+                            </li>
+
+                            <li class="col-md-3">
+                                <div class="figure">
+                                    <a href="secondday.html">
+                                        <img src="img/icon/2day.png" alt="" class="figure-img img-fluid">
+                                        <figcaption class="figure-caption subTxt">2日目イベント</figcaption>
+                                    </a>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <li class="menu__mega">
+                        <div class="bg-primary">
+                            <i class="far fa-calendar-check mr-xl-3"></i>イベント一覧<i class="fas fa-angle-down ml-xl-2"></i>
+                        </div>
+                        <ul class="menu__second-level row">
+
+                            <li class="col-12 text-left ml-xl-5 ml-lg-3 my-3">
+                                <h2>●イベント一覧TOP</h2>
+                            </li>
+
+                            <li class="col-md-3">
+                                <div class="figure">
+                                    <a href="stage.html">
+                                        <img src="img/icon/timetable.png" alt="" class="figure-img img-fluid">
+                                        <figcaption class="figure-caption subTxt">合同タイムテーブル</figcaption>
+                                    </a>
+                                </div>
+                            </li>
+
+                            <li class="col-md-3">
+                                <div class="figure">
+                                    <a href="gakunai.html">
+                                        <img src="img/icon/gakunai.png" alt="" class="figure-img img-fluid">
+                                        <figcaption class="figure-caption subTxt">学内イベント</figcaption>
+                                    </a>
+                                </div>
+                            </li>
+
+                            <li class="col-md-3">
+                                <div class="figure">
+                                    <a href="sousaku.html">
+                                        <img src="img/icon/sousaku.png" alt="" class="figure-img img-fluid">
+                                        <figcaption class="figure-caption subTxt">創作イベント</figcaption>
+                                    </a>
+                                </div>
+                            </li>
+
+                            <!--
+<li class="col-md-3">
+<div class="figure">
+<a href="">
+<img src="img/T_map.JPG" alt="" class="figure-img img-fluid">
+<figcaption class="figure-caption subTxt">その他イベント</figcaption>
+</a>
+</div>
+</li>
+-->
+
+                        </ul>
+                    </li>
+
+                    <li class="menu__mega">
+
+                        <i class="fas fa-user mr-xl-3"></i>ご来場の方へ<i class="fas fa-angle-down ml-xl-2"></i>
+
+                        <ul class="menu__second-level row">
+
+                            <li class="col-12 text-left ml-xl-5 ml-lg-3 my-3">
+                                <h2>●ご来場の方へTOP</h2>
+                            </li>
+
+                            <li class="col-md-3">
+                                <div class="figure">
+                                    <a href="visitors.html">
+                                        <img src="img/icon/info.png" alt="" class="figure-img img-fluid">
+                                        <figcaption class="figure-caption subTxt">お知らせ/禁止事項</figcaption>
+                                    </a>
+                                </div>
+                            </li>
+
+                            <li class="col-md-3">
+                                <div class="figure">
+                                    <a href="access.html">
+                                        <img src="img/icon/acces.png" alt="" class="figure-img img-fluid">
+                                        <figcaption class="figure-caption subTxt">アクセス</figcaption>
+                                    </a>
+                                </div>
+                            </li>
+                            
+                            <li class="col-md-3">
+                                <div class="figure">
+                                    <a href="news.html">
+                                        <img src="img/icon/emargency.png" alt="" class="figure-img img-fluid">
+                                        <figcaption class="figure-caption subTxt">緊急情報</figcaption>
+                                    </a>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <li class="menu__mega">
+                        <i class="fas fa-store mr-xl-3"></i>参加者の方へ<i class="fas fa-angle-down ml-xl-2"></i>
+                        <ul class="menu__second-level row">
+
+                            <li class="col-12 text-left ml-xl-5 ml-lg-3 my-3">
+                                <h2>●参加者の方へTOP</h2>
+                            </li>
+
+                            <li class="col-md-3">
+                                <div class="figure">
+                                    <a href="hurima.html">
+                                        <img src="img/icon/hurima.png" alt="" class="figure-img img-fluid">
+                                        <figcaption class="figure-caption subTxt">フリマ出店者の方へ</figcaption>
+                                    </a>
+                                </div>
+                            </li>
+
+                            <li class="col-md-3">
+                                <div class="figure">
+                                    <a href="event_apply.html">
+                                        <img src="img/icon/stage.png" alt="" class="figure-img img-fluid">
+                                        <figcaption class="figure-caption subTxt">ステージ/講堂応募フォーム</figcaption>
+                                    </a>
+                                </div>
+                            </li>
+
+                            <li class="col-md-3">
+                                <div class="figure">
+                                    <a href="gakunai&mogi.html">
+                                        <img src="img/icon/gakunai&mogi.png" alt="" class="figure-img img-fluid">
+                                        <figcaption class="figure-caption subTxt">学内/模擬店出者の方へ</figcaption>
+                                    </a>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <li class="menu__mega">
+                        <i class="fas fa-question-circle mr-xl-3"></i>その他<i class="fas fa-angle-down ml-xl-2"></i>
+                        <ul class="menu__second-level row">
+
+                            <li class="col-12 text-left ml-xl-5 ml-lg-3 my-3">
+                                <h2>●その他TOP</h2>
+                            </li>
+
+                            <li class="col-md-3">
+                                <div class="figure">
+                                    <a href="syuhu.html">
+                                        <img src="img/icon/syuhu.png" alt="" class="figure-img img-fluid">
+                                        <figcaption class="figure-caption subTxt">鷲風祭とは？</figcaption>
+                                    </a>
+                                </div>
+                            </li>
+
+                            <li class="col-md-3">
+                                <div class="figure">
+                                    <a href="https://www.iwate-pu.ac.jp/" target="_blank">
+                                        <img src="img/icon/IPU.png" alt="" class="figure-img img-fluid">
+                                        <figcaption class="figure-caption subTxt">岩手県立大学公式HP</figcaption>
+                                    </a>
+                                </div>
+                            </li>
+
+                            <li class="col-md-3">
+                                <div class="figure">
+                                    <a href="other.html">
+                                        <img src="img/icon/univ.png" alt="" class="figure-img img-fluid">
+                                        <figcaption class="figure-caption subTxt">大学祭関係者様</figcaption>
+                                    </a>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+
+
+        <!--md以下メニューバー-->
+
+        <nav id="headerBottom-s">
+            <ul class="navi">
+
+                <li>
+                    <a href="index.html">
+                        <div class="category" id="fes"><i class="fas fa-home mr-3 fa-fw"></i>ホーム</div>
+                    </a>
+                </li>
+
+
+                <li>
+                    <div class="category"><i class="fas fa-map-marked-alt mr-3 fa-fw"></i>会場マップ</div>
+                    <ul class="menu1">
+                        <li><a href="navi.html">校内マップ</a></li>
+                        <li><a href="mogi_navi.html">模擬店マップ</a></li>
+                        <li><a href="firstday.html">1日/両日イベント</a></li>
+                        <li><a href="secondday.html">2日イベント</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <div class="category"><i class="far fa-calendar-check mr-3 fa-fw"></i>イベント一覧</div>
+                    <ul class="menu1">
+                        <li><a href="stage.html">合同タイムテーブル</a></li>
+                        <li><a href="gakunai.html">学内イベント</a></li>
+                        <li><a href="sousaku.html">創作イベント</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <div class="category"><i class="fas fa-user mr-3 fa-fw"></i>ご来場の方へ</div>
+                    <ul class="menu1">
+                        <li><a href="visitors.html">お知らせ・禁止事項</a></li>
+                        <li><a href="access.html">アクセス</a></li>
+                        <li><a href="news.html">緊急情報</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <div class="category"><i class="fas fa-store mr-3 fa-fw"></i>参加者の方へ</div>
+                    <ul class="menu1">
+                        <li><a href="hurima.html">フリマ出店者の方へ</a></li>
+                        <li><a href="event_apply.html">ステージ/講堂応募フォーム</a></li>
+                        <li><a href="gakunai&mogi.html">学内/模擬店出店者の方へ</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <div class="category"><i class="fas fa-question-circle mr-3 fa-fw"></i>その他</div>
+                    <ul class="menu1">
+                        <li><a href="syuhu.html">鷲風祭とは？</a></li>
+                        <li><a href="https://www.iwate-pu.ac.jp/" target="_blank">岩手県立大学公式HP</a></li>
+                        <li><a href="other.html">大学祭関係者様</a></li>
+                    </ul>
+                </li>
+
+
+                <li>
+                    <a href="contact.html">
+                        <div class="categoryU">お問い合わせ</div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="question.html">
+                        <div class="categoryU">よくあるご質問</div>
+                    </a>
+                </li>
+
+                <li>
+                    <div class="categorySNS">
+                        <p class="py-2">公式SNS</p>
+                        <a href="https://www.instagram.com/festa_iwate_pu/" target="_blank" class="insta_btn">
+                            <span class="insta">
+                                <i class="fab fa-instagram"></i>
+                            </span>
+                        </a>
+                        <a href="https://twitter.com/festa_iwate_pu" target="_blank" class="twitter_btn">
+                            <span class="twitter">
+                                <i class="fab fa-twitter"></i>
+                            </span>
+                        </a>
+                        <!--
+<a href="" class="line_btn">
+<span class="line">
+<i class="fab fa-line"></i>
+</span>
+</a>
+-->
+                    </div>
+                </li>
+
+            </ul>
+        </nav>
+        <!--メニューバー-->
+
+        <!-- /ヘッダー -->
+        <main>
+            <section class="gakunai">
+                <div class="container">
+                    <h1>学内イベント</h1>
+                    <p>※昨年度</p>
+                </div>
+                <!--/共通棟1F-->
+                <div class="pb-5">
+                    <section id="kyoutu1">
+                        <div class="container">
+                            <div class="row py-3">
+                                <div class="col">
+                                    <h3>共通棟1F</h3>
+                                </div>
+                            </div>
+                            <!--画像-->
+                            <div class="row">
+                                <div class="col text-center">
+                                    <img class="img-fluid" src="img/navi/kyoutuu1F.png" alt="">
+                                </div>
+                            </div>
+                            <!-- 紹介文 -->
+                            <div class="py-3">
+                                <div class="row">
+                                   
+                                    <div class="col-md-6">
+                                        <h2>1.花の展示</h2>
+                                        <div class="row">
+                                            <div class="col">
+                                                <p>講堂前では部員が生けたお花を見て楽しむことができます。
+                                                    また、日々の活動紹介もしています。ぜひお越しください。</p>
+                                            </div>
+                                        </div>
+                                        <div class="row ml-1">
+                                            <div class="col pt-1 pl-0">
+                                                <dl class="row">
+                                                    <dt class="col-3">時刻</dt>
+                                                    <dd class="col-9">20日/10:00～16:00</dd>
+                                                    <dt class="col-3"></dt>
+                                                    <dd class="col-9">21日/10:00～15:00</dd>
+                                                    <dt class="col-3">場所</dt>
+                                                    <dd class="col-9">講堂前</dd>
+                                                    <dt class="col-3">団体</dt>
+                                                    <dd class="col-9">華道部</dd>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-md-6">
+                                        <h2>2.ライブハウス</h2>
+                                        <div class="row">
+                                            <div class="col">
+                                                <p>あなたの歌唱力を試してみませんか。友達や彼氏彼女の前でカッコつけちゃおう！高得点を取ったら何かあるかも！</p>
+                                            </div>
+                                        </div>
+                                        <div class="row ml-1">
+                                            <div class="col pt-1 pl-0">
+                                                <dl class="row">
+                                                    <dt class="col-3">時刻</dt>
+                                                    <dd class="col-9">20日/10:00～17:00</dd>
+                                                    <dt class="col-3"></dt>
+                                                    <dd class="col-9">21日/10:00～16:00</dd>
+                                                    <dt class="col-3">場所</dt>
+                                                    <dd class="col-9">109講義室</dd>
+                                                    <dt class="col-3">団体</dt>
+                                                    <dd class="col-9">暇人の集い</dd>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <h2>3.ミニ演奏会</h2>
+                                        <div class="row">
+                                            <div class="col">
+                                                <p>今回は皆さんが一度は聞いたことがある曲を用意しました。口ずさんだり、手拍子をたたいたりしながら楽しんでください。</p>
+                                            </div>
+                                        </div>
+                                        <div class="row ml-1">
+                                            <div class="col pt-1 pl-0">
+                                                <dl class="row">
+                                                    <dt class="col-3">時刻</dt>
+                                                    <dd class="col-9">20日/11:55～12:25</dd>
+                                                    <dt class="col-3"></dt>
+                                                    <dd class="col-9">21日/11:05～11:35</dd>
+                                                    <dt class="col-3">場所</dt>
+                                                    <dd class="col-9">講堂前</dd>
+                                                    <dt class="col-3">団体</dt>
+                                                    <dd class="col-9">マンドリンアンサンブル～color～</dd>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <!--/共通棟1F-->
+                <!--共通棟2F-->
+                <div class="py-5">
+                    <section id="kyoutu2">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col py-3">
+                                    <h3>共通棟2F</h3>
+                                </div>
+                            </div>
+                            <!--画像-->
+                            <div class="row">
+                                <div class="col text-center">
+                                    <img class="img-fluid" src="img/navi/kyoutuu2F.png" alt="">
+                                </div>
+                            </div>
+                            <!-- 紹介文 -->
+                            <div class="py-3">
+                                <div class="row">
+                                   
+                                    <div class="col-md-6">
+                                        <h2>1.学部合同入試相談会</h2>
+                                        <div class="row">
+                                            <div class="col">
+                                                <p>各学部の入試概要等についても説明します。どうぞお気軽にお越しください。学生による学生生活紹介も行います。</p>
+                                            </div>
+                                        </div>
+                                        <div class="row ml-1">
+                                            <div class="col pt-1 pl-0">
+                                                <dl class="row">
+                                                    <dt class="col-3">時刻</dt>
+                                                    <dd class="col-9">20日/10:00～15:00</dd>
+                                                    <dt class="col-3"></dt>
+                                                    <dd class="col-9">21日/10:00～15:00</dd>
+                                                    <dt class="col-3">場所</dt>
+                                                    <dd class="col-9">201講義室</dd>
+                                                    <dt class="col-3">団体</dt>
+                                                    <dd class="col-9">教育支援室(入試グループ)</dd>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-md-6">
+                                        <h2>2.鷲風 Photo Gallery</h2>
+                                        <div class="row">
+                                            <div class="col">
+                                                <p>部員撮影の写真を様々な方法で展示し、フォトコンテストやポストカード販売も行っております。お気軽にお立ち寄りください。</p>
+                                            </div>
+                                        </div>
+                                        <div class="row ml-1">
+                                            <div class="col pt-1 pl-0">
+                                                <dl class="row">
+                                                    <dt class="col-3">時刻</dt>
+                                                    <dd class="col-9">20日/10:00～17:00</dd>
+                                                    <dt class="col-3"></dt>
+                                                    <dd class="col-9">21日/10:00～15:00</dd>
+                                                    <dt class="col-3">場所</dt>
+                                                    <dd class="col-9">203講義室</dd>
+                                                    <dt class="col-3">団体</dt>
+                                                    <dd class="col-9">写真部</dd>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <h2>3.何でも相談室</h2>
+                                        <div class="row">
+                                            <div class="col">
+                                                <p>キャンパス・アテンダントです☆私たちが入試対策・大学生活などにお応えする相談会です！学生目線で皆さんのお悩みを解決します！気軽に来てね～！！</p>
+                                            </div>
+                                        </div>
+                                        <div class="row ml-1">
+                                            <div class="col pt-1 pl-0">
+                                                <dl class="row">
+                                                    <dt class="col-3">時刻</dt>
+                                                    <dd class="col-9">20日/10:00～17:00</dd>
+                                                    <dt class="col-3"></dt>
+                                                    <dd class="col-9">21日/10:00～15:00</dd>
+                                                    <dt class="col-3">場所</dt>
+                                                    <dd class="col-9">207講義室</dd>
+                                                    <dt class="col-3">団体</dt>
+                                                    <dd class="col-9">キャンパスアテンダント(CA)</dd>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <h2>4.岩手県立大学ポケモンフェスタ2018</h2>
+                                        <div class="row">
+                                            <div class="col">
+                                                <p>岩手県立大学ポケモンサークルではぬり絵やクイズ、ウルトラムーンを使ったポケモンカードの大会を予定しています。</p>
+                                            </div>
+                                        </div>
+                                        <div class="row ml-1">
+                                            <div class="col pt-1 pl-0">
+                                                <dl class="row">
+                                                    <dt class="col-3">時刻</dt>
+                                                    <dd class="col-9">20日/10:00～17:00</dd>
+                                                    <dt class="col-3"></dt>
+                                                    <dd class="col-9">21日/10:00～16:00</dd>
+                                                    <dt class="col-3">場所</dt>
+                                                    <dd class="col-9">208講義室</dd>
+                                                    <dt class="col-3">団体</dt>
+                                                    <dd class="col-9">岩手県立大学ポケモンサークル</dd>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <h2>5.国際交流パネル展示報告会2018</h2>
+                                        <div class="row">
+                                            <div class="col">
+                                                <p>2018年に実施した海外研究の様子や本学の留学生の出身国についてパネルで展示紹介するとともに、研修参加者の報告会(21日(日)/10:00～)を開催します。</p>
+                                            </div>
+                                        </div>
+                                        <div class="row ml-1">
+                                            <div class="col pt-1 pl-0">
+                                                <dl class="row">
+                                                    <dt class="col-3">時刻</dt>
+                                                    <dd class="col-9">20日/10:00～17:00</dd>
+                                                    <dt class="col-3"></dt>
+                                                    <dd class="col-9">21日/10:00～16:00</dd>
+                                                    <dt class="col-3">場所</dt>
+                                                    <dd class="col-9">206講義室</dd>
+                                                    <dt class="col-3">団体</dt>
+                                                    <dd class="col-9">教育支援室(教務・国際交流グループ)</dd>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <h2>6.4年生学部共通の基盤教育紹介</h2>
+                                        <div class="row">
+                                            <div class="col">
+                                                <p>看護学部、社会福祉学部、ソフトウェア情報学部、総合政策学部の学生が共通で学ぶ「基盤教育」に
+                                                    ついて紹介するポスターを展示します！</p>
+                                            </div>
+                                        </div>
+                                        <div class="row ml-1">
+                                            <div class="col pt-1 pl-0">
+                                                <dl class="row">
+                                                    <dt class="col-3">時刻</dt>
+                                                    <dd class="col-9">20日/10:00～17:00</dd>
+                                                    <dt class="col-3"></dt>
+                                                    <dd class="col-9">21日/10:00～16:00</dd>
+                                                    <dt class="col-3">場所</dt>
+                                                    <dd class="col-9">共通棟～総政棟2F廊下</dd>
+                                                    <dt class="col-3">団体</dt>
+                                                    <dd class="col-9">高等教育推進センター</dd>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <!--/共通棟2F-->
+                <!--共通棟3F-->
+                <div class="py-5">
+                    <section id="kyoutu3">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col py-3">
+                                    <h3>共通棟3F</h3>
+                                </div>
+                            </div>
+                            <!--画像-->
+                            <div class="row">
+                                <div class="col text-center">
+                                    <img class="img-fluid" src="img/navi/kyoutuu3F.png" alt="">
+                                </div>
+                            </div>
+                            <!-- 紹介文 -->
+                            <div class="py-3">
+                                <div class="row">
+                                   
+                                    <div class="col-md-6">
+                                        <h2>1.ア・カペラ教室LIVE</h2>
+                                        <div class="row">
+                                            <div class="col">
+                                                <p>私アカペラーは声だけで音楽を表現できるの！今日は突然教室のライブを任されちゃってもう大変！？私これからどうなるんだろう？？</p>
+                                            </div>
+                                        </div>
+                                        <div class="row ml-1">
+                                            <div class="col pt-1 pl-0">
+                                                <dl class="row">
+                                                    <dt class="col-3">時刻</dt>
+                                                    <dd class="col-9">21日/10:00～16:00</dd>
+                                                    <dt class="col-3">場所</dt>
+                                                    <dd class="col-9">305講義室</dd>
+                                                    <dt class="col-3">団体</dt>
+                                                    <dd class="col-9">ア・カペラサークル Jelly Beans</dd>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-md-6">
+                                        <h2>2.劇団ちゃねる 秋の大合戦</h2>
+                                        <div class="row">
+                                            <div class="col">
+                                                <p>「1年生と2年生で戦争をしよう」そんな発言から起こった1年生vs2年生の短編劇合戦が幕を開ける。勝者を決めるのはお客様です。</p>
+                                            </div>
+                                        </div>
+                                        <div class="row ml-1">
+                                            <div class="col pt-1 pl-0">
+                                                <dl class="row">
+                                                    <dt class="col-3">時刻</dt>
+                                                    <dd class="col-9">20日/10:30～17:00</dd>
+                                                    <dt class="col-3"></dt>
+                                                    <dd class="col-9">21日/10:30～16:00</dd>
+                                                    <dt class="col-3">場所</dt>
+                                                    <dd class="col-9">306講義室</dd>
+                                                    <dt class="col-3">団体</dt>
+                                                    <dd class="col-9">演劇部 劇団ちゃねる</dd>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <h2>3.MCAの展示ブース</h2>
+                                        <div class="row">
+                                            <div class="col">
+                                                <p>MCAは実装部、動画部、シナリオ部などの各部署で現在活動しております。今回はそれぞれの部署で成果物を展示します。</p>
+                                            </div>
+                                        </div>
+                                        <div class="row ml-1">
+                                            <div class="col pt-1 pl-0">
+                                                <dl class="row">
+                                                    <dt class="col-3">時刻</dt>
+                                                    <dd class="col-9">20日/10:00～17:00</dd>
+                                                    <dt class="col-3"></dt>
+                                                    <dd class="col-9">21日/10:00～16:00</dd>
+                                                    <dt class="col-3">場所</dt>
+                                                    <dd class="col-9">307講義室</dd>
+                                                    <dt class="col-3">団体</dt>
+                                                    <dd class="col-9">MCA</dd>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <h2>4.地域懇談会</h2>
+                                        <div class="row">
+                                            <div class="col">
+                                                <p>地域懇談会では保護者などご父兄の皆様へ大学の近況をお知らせします。ご希望の方には個別相談コーナーで、ご相談承ります。</p>
+                                            </div>
+                                        </div>
+                                        <div class="row ml-1">
+                                            <div class="col pt-1 pl-0">
+                                                <dl class="row">
+                                                    <dt class="col-3">時刻</dt>
+                                                    <dd class="col-9">21日/13:00～15:00</dd>
+                                                    <dt class="col-3">場所</dt>
+                                                    <dd class="col-9">301,302,303,304講義室</dd>
+                                                    <dt class="col-3">団体</dt>
+                                                    <dd class="col-9">岩手県立大学後援会</dd>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <h2>5.Re:ドキ☆ぺら</h2>
+                                        <div class="row">
+                                            <div class="col">
+                                                <p>イラスト展示、部誌・ポストカード販売などを行っています。お絵描きコーナーもあります！ぺら、リスタートするってよ</p>
+                                            </div>
+                                        </div>
+                                        <div class="row ml-1">
+                                            <div class="col pt-1 pl-0">
+                                                <dl class="row">
+                                                    <dt class="col-3">時刻</dt>
+                                                    <dd class="col-9">20日/10:00～17:00</dd>
+                                                    <dt class="col-3"></dt>
+                                                    <dd class="col-9">21日/10:00～16:00</dd>
+                                                    <dt class="col-3">場所</dt>
+                                                    <dd class="col-9">308講義室</dd>
+                                                    <dt class="col-3">団体</dt>
+                                                    <dd class="col-9">CROSS+CAGE</dd>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <!--/共通棟3F-->
+                <!--総政棟1F-->
+                <div class="py-5">
+                    <section id="sousei1">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col py-3">
+                                    <h3>総政棟1F</h3>
+                                </div>
+                            </div>
+                            <!--画像-->
+                            <div class="row">
+                                <div class="col text-center">
+                                    <img class="img-fluid" src="img/navi/sousei.png" alt="">
+                                </div>
+                            </div>
+                            <!-- 紹介文 -->
+                            <div class="py-3">
+                                <div class="row">
+
+                                    <div class="col-md-6">
+                                        <h2>1.学部の紹介とゼミ有志によるポスターセッション</h2>
+                                        <div class="row">
+                                            <div class="col">
+                                                <p>総合政策学部の３コース(現在４履修モデル)の講義や、4年生の卒業研究を含むゼミの研究内容をポスターで紹介します。</p>
+                                            </div>
+                                        </div>
+                                        <div class="row ml-1">
+                                            <div class="col pt-1 pl-0">
+                                                <dl class="row">
+                                                    <dt class="col-3">時刻</dt>
+                                                    <dd class="col-9">20日/10:00～17:00</dd>
+                                                    <dt class="col-3"></dt>
+                                                    <dd class="col-9">21日/10:00～16:00</dd>
+                                                    <dt class="col-3">場所</dt>
+                                                    <dd class="col-9">総合政策学部1F廊下</dd>
+                                                    <dt class="col-3">団体</dt>
+                                                    <dd class="col-9">総合政策学部</dd>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <h2>2.よろず相談</h2>
+                                        <div class="row">
+                                            <div class="col">
+                                                <p>入試や授業、学生生活など、総合政策学部について気になっていることはありませんか？在学生がどんなことでも学生視点でお答えします！どなたでも相談歓迎します！！</p>
+                                            </div>
+                                        </div>
+                                        <div class="row ml-1">
+                                            <div class="col pt-1 pl-0">
+                                                <dl class="row">
+                                                    <dt class="col-3">時刻</dt>
+                                                    <dd class="col-9">20日/10:00～17:00</dd>
+                                                    <dt class="col-3"></dt>
+                                                    <dd class="col-9">21日/10:00～16:00</dd>
+                                                    <dt class="col-3">場所</dt>
+                                                    <dd class="col-9">アクティブラーニングルーム</dd>
+                                                    <dt class="col-3">団体</dt>
+                                                    <dd class="col-9">総合政策学部学生会</dd>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <h2>3.総合政策教員の地域政策研究センター地域協働研究</h2>
+                                        <div class="row">
+                                            <div class="col">
+                                                <p>学部教員によりる地域政策研究センター地域協働研究成果をポスターで紹介します。地域に根差した総合政策部ならではの多様な取り組みが見られます。</p>
+                                            </div>
+                                        </div>
+                                        <div class="row ml-1">
+                                            <div class="col pt-1 pl-0">
+                                                <dl class="row">
+                                                    <dt class="col-3">時刻</dt>
+                                                    <dd class="col-9">20日/10:00～17:00</dd>
+                                                    <dt class="col-3"></dt>
+                                                    <dd class="col-9">21日/10:00～16:00</dd>
+                                                    <dt class="col-3">場所</dt>
+                                                    <dd class="col-9">101演習室</dd>
+                                                    <dt class="col-3">団体</dt>
+                                                    <dd class="col-9">総合政策学部学生会</dd>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <h2>4.環境系教員による取り組み内容紹介ポスター展示</h2>
+                                        <div class="row">
+                                            <div class="col">
+                                                <p>市民参加による外来種対策や貴重種保全、震災復興事業における海岸植物の保全対策、大学周辺における様々な保全活動など、県内での研究事例を中心に紹介します。</p>
+                                            </div>
+                                        </div>
+                                        <div class="row ml-1">
+                                            <div class="col pt-1 pl-0">
+                                                <dl class="row">
+                                                    <dt class="col-3">時刻</dt>
+                                                    <dd class="col-9">20日/10:00～17:00</dd>
+                                                    <dt class="col-3"></dt>
+                                                    <dd class="col-9">21日/10:00～16:00</dd>
+                                                    <dt class="col-3">場所</dt>
+                                                    <dd class="col-9">環境調査実習室1、環境調査実習室2</dd>
+                                                    <dt class="col-3">団体</dt>
+                                                    <dd class="col-9">渋谷、島田、辻、鈴木研究室</dd>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <h2>5.ドジョウすくい</h2>
+                                        <div class="row">
+                                            <div class="col">
+                                                <p>総合政策学部でドジョウすくい？どこにでもいるようで、実は姿を消しつつあるドジョウ。自分の手で捕まえ、触れてみませんか？</p>
+                                            </div>
+                                        </div>
+                                        <div class="row ml-1">
+                                            <div class="col pt-1 pl-0">
+                                                <dl class="row">
+                                                    <dt class="col-3">時刻</dt>
+                                                    <dd class="col-9">20日/10:00～17:00</dd>
+                                                    <dt class="col-3">場所</dt>
+                                                    <dd class="col-9">環境調査実習室2</dd>
+                                                    <dt class="col-3">団体</dt>
+                                                    <dd class="col-9">辻、鈴木研究室</dd>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <!--/総政棟1F-->
+                <!--ソフトA棟2F-->
+                <div class="py-5">
+                    <section id="soft4">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col py-3">
+                                    <h3>ソフトB棟4F</h3>
+                                </div>
+                            </div>
+                            <!--画像-->
+                            <div class="row">
+                                <div class="col text-center">
+                                    <img class="img-fluid" src="img/navi/softB.png" alt="">
+                                </div>
+                            </div>
+                            <!-- 紹介文 -->
+                            <div class="py-3">
+                                <div class="row">
+                                   
+                                    <div class="col-md-6">
+                                        <h2>1.放送部による鷲風祭生放送</h2>
+                                        <div class="row">
+                                            <div class="col">
+                                                <p>放送部が行う学生ラジオで、鷲風祭の様子を皆さんにお伝えします。各出店や講堂、メインステージのリポートを行います。</p>
+                                            </div>
+                                        </div>
+                                        <div class="row ml-1">
+                                            <div class="col pt-1 pl-0">
+                                                <dl class="row">
+                                                    <dt class="col-3">時刻</dt>
+                                                    <dd class="col-9">20日/11:00～14:00</dd>
+                                                    <dt class="col-3"></dt>
+                                                    <dd class="col-9">21日/11:00～14:00</dd>
+                                                    <dt class="col-3">場所</dt>
+                                                    <dd class="col-9">ソフトA～B棟2F廊下、ソフトA棟201講義室</dd>
+                                                    <dt class="col-3">団体</dt>
+                                                    <dd class="col-9">ソフトウェア情報学部</dd>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <!--/ソフトA棟2F-->
+                <!--ソフトA棟2F-->
+                <div class="py-5">
+                    <section id="soft2">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col py-3">
+                                    <h3>ソフトA棟2F</h3>
+                                </div>
+                            </div>
+                            <!--画像-->
+                            <div class="row">
+                                <div class="col text-center">
+                                    <img class="img-fluid" src="img/navi/softA.png" alt="">
+                                </div>
+                            </div>
+                            <!-- 紹介文 -->
+                            <div class="py-3">
+                                <div class="row">
+                                   
+                                    <div class="col-md-6">
+                                        <h2>2.講座研究紹介</h2>
+                                        <div class="row">
+                                            <div class="col">
+                                                <p>ソフト棟2F廊下にて、研究室等が行っている研究をパネル等を用いて紹介します。また、201講義室では、ETロボコン関連の研究紹介を行います。ぜひお越し下さい。</p>
+                                            </div>
+                                        </div>
+                                        <div class="row ml-1">
+                                            <div class="col pt-1 pl-0">
+                                                <dl class="row">
+                                                    <dt class="col-3">時刻</dt>
+                                                    <dd class="col-9">20日/11:00～14:00</dd>
+                                                    <dt class="col-3"></dt>
+                                                    <dd class="col-9">21日/11:00～14:00</dd>
+                                                    <dt class="col-3">場所</dt>
+                                                    <dd class="col-9">ソフトA～B棟2F廊下、ソフトA棟201講義室</dd>
+                                                    <dt class="col-3">団体</dt>
+                                                    <dd class="col-9">ソフトウェア情報学部</dd>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-md-6">
+                                        <h2>3.学部プロジェクト研究紹介</h2>
+                                        <div class="row">
+                                            <div class="col">
+                                                <p>学部で実施している研究プロジェクトについてパネル等を用いて研究紹介しています。こちらもぜひお越しください。</p>
+                                            </div>
+                                        </div>
+                                        <div class="row ml-1">
+                                            <div class="col pt-1 pl-0">
+                                                <dl class="row">
+                                                    <dt class="col-3">時刻</dt>
+                                                    <dd class="col-9">20日/11:00～14:00</dd>
+                                                    <dt class="col-3"></dt>
+                                                    <dd class="col-9">21日/11:00～14:00</dd>
+                                                    <dt class="col-3">場所</dt>
+                                                    <dd class="col-9">ソフトA～B棟2F廊下</dd>
+                                                    <dt class="col-3">団体</dt>
+                                                    <dd class="col-9">ソフトウェア情報学部</dd>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <h2>4.大学祭コンベンション</h2>
+                                        <div class="row">
+                                            <div class="col">
+                                                <p>TRPGに興味がある方。いくつかのシステムをご用意して待っております。遊んでみたい方はぜひご参加してみてください。</p>
+                                            </div>
+                                        </div>
+                                        <div class="row ml-1">
+                                            <div class="col pt-1 pl-0">
+                                                <dl class="row">
+                                                    <dt class="col-3">時刻</dt>
+                                                    <dd class="col-9">20日/10:00～14:00</dd>
+                                                    <dt class="col-3">場所</dt>
+                                                    <dd class="col-9">ソフトA棟203、204講義室</dd>
+                                                    <dt class="col-3">団体</dt>
+                                                    <dd class="col-9">TRPGサークル「OVER FLOW」</dd>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <!--/ソフトA棟2F-->
+                <!--短大棟1F-->
+                <div class="py-5">
+                    <section id="tandai1">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col py-3">
+                                    <h3>短大棟1F</h3>
+                                </div>
+                            </div>
+                            <!--画像-->
+                            <div class="row">
+                                <div class="col text-center">
+                                    <img class="img-fluid" src="img/navi/tandai.png" alt="">
+                                </div>
+                            </div>
+                            <!-- 紹介文 -->
+                            <div class="py-3">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <h2>1.学部紹介(ポスター展示)</h2>
+                                        <div class="row">
+                                            <div class="col">
+                                                <p>盛岡短期大学部の授業内容を紹介します。また、学生の卒業研究や教員が取り組んでいることなどについてポスター展示します。</p>
+                                            </div>
+                                        </div>
+                                        <div class="row ml-1">
+                                            <div class="col pt-1 pl-0">
+                                                <dl class="row">
+                                                    <dt class="col-3">時刻</dt>
+                                                    <dd class="col-9">20日/10:00～17:00</dd>
+                                                    <dt class="col-3"></dt>
+                                                    <dd class="col-9">21日/10:00～15:00</dd>
+                                                    <dt class="col-3">場所</dt>
+                                                    <dd class="col-9">短大棟1F廊下</dd>
+                                                    <dt class="col-3">団体</dt>
+                                                    <dd class="col-9">盛岡短期大学部広報委員会</dd>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <h2>2.JAM!! Cafe</h2>
+                                        <div class="row">
+                                            <div class="col">
+                                                <p>美しいコーヒーとケーキ等のスイーツを提供しながらジャズセッションをします。セッション参加も歓迎します。ぜひお越しください。</p>
+                                            </div>
+                                        </div>
+                                        <div class="row ml-1">
+                                            <div class="col pt-1 pl-0">
+                                                <dl class="row">
+                                                    <dt class="col-3">時刻</dt>
+                                                    <dd class="col-9">20日/10:00～17:00</dd>
+                                                    <dt class="col-3"></dt>
+                                                    <dd class="col-9">21日/10:00～16:00</dd>
+                                                    <dt class="col-3">場所</dt>
+                                                    <dd class="col-9">エントランス</dd>
+                                                    <dt class="col-3">団体</dt>
+                                                    <dd class="col-9">JAM!!</dd>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <!--/短大棟1F-->
+                <!--看護棟1F-->
+                <div class="py-5">
+                    <section id="kango1">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col py-3">
+                                    <h3>看護棟1F</h3>
+                                </div>
+                            </div>
+                            <!--画像-->
+                            <div class="row">
+                                <div class="col text-center">
+                                    <img class="img-fluid" src="img/navi/kango.png" alt="">
+                                </div>
+                            </div>
+                            <!-- 紹介文 -->
+                            <div class="py-3">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <h2>1.看護学部の紹介と体験</h2>
+                                        <div class="row">
+                                            <div class="col">
+                                                <p>入試相談コーナーや血圧測定、赤ちゃん抱っこなどの体験ブースを設置しています！実習室を着た学生が目印！ぜひお越し下さい！</p>
+                                            </div>
+                                        </div>
+                                        <div class="row ml-1">
+                                            <div class="col pt-1 pl-0">
+                                                <dl class="row">
+                                                    <dt class="col-3">時刻</dt>
+                                                    <dd class="col-9">20日/10:00～16:00</dd>
+                                                    <dt class="col-3"></dt>
+                                                    <dd class="col-9">21日/10:00～15:30</dd>
+                                                    <dt class="col-3">場所</dt>
+                                                    <dd class="col-9">看護棟全域</dd>
+                                                    <dt class="col-3">団体</dt>
+                                                    <dd class="col-9">看護学部学生会</dd>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h2>2."看護について知ろう"ポスター展示</h2>
+                                        <div class="row">
+                                            <div class="col">
+                                                <p>看護職に強い関心をお持ちの方へ、看護学部の教育研究活動について、ポスターやパンフレットを展示して紹介します。また、看護師・保健師・助産師・養護教諭の仕事や岩手県内で活躍する卒業生について紹介していきます。</p>
+                                            </div>
+                                        </div>
+                                        <div class="row ml-1">
+                                            <div class="col pt-1 pl-0">
+                                                <dl class="row">
+                                                    <dt class="col-3">時刻</dt>
+                                                    <dd class="col-9">20日/10:30～14:00</dd>
+                                                    <dt class="col-3"></dt>
+                                                    <dd class="col-9">21日/10:30～14:00</dd>
+                                                    <dt class="col-3">場所</dt>
+                                                    <dd class="col-9">看護棟1F廊下・ラウンジ</dd>
+                                                    <dt class="col-3">団体</dt>
+                                                    <dd class="col-9">看護学部広報委員会</dd>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <!--/看護棟1F-->
+                <!--社福棟2F-->
+                <div class="py-5">
+                    <section id="syahuku2">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col py-3">
+                                    <h3>社福棟2F</h3>
+                                </div>
+                            </div>
+                            <!--画像-->
+                            <div class="row">
+                                <div class="col text-center">
+                                    <img class="img-fluid" src="img/navi/syahuku.png" alt="">
+                                </div>
+                            </div>
+                            <!-- 紹介文 -->
+                            <div class="py-3">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <h2>1.ちびっこ広場</h2>
+                                        <div class="row">
+                                            <div class="col">
+                                                <p>子供たちが安全に楽しく遊べるコーナーを設定しています。大人の方も大歓迎です。休憩にご利用ください。授乳室もあります。</p>
+                                            </div>
+                                        </div>
+                                        <div class="row ml-1">
+                                            <div class="col pt-1 pl-0">
+                                                <dl class="row">
+                                                    <dt class="col-3">時刻</dt>
+                                                    <dd class="col-9">20日/10:00～16:00</dd>
+                                                    <dt class="col-3"></dt>
+                                                    <dd class="col-9">21日/10:00～15:30</dd>
+                                                    <dt class="col-3">場所</dt>
+                                                    <dd class="col-9">社福棟プレイルーム</dd>
+                                                    <dt class="col-3">団体</dt>
+                                                    <dd class="col-9">どろんこ隊☆</dd>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h2>2.どろだんご作り</h2>
+                                        <div class="row">
+                                            <div class="col">
+                                                <p>ひんやり、ざらざら、土の香りなどの感覚が楽しい泥だんご！丸めてギュッギュッ、お砂をかけてパラパラ、ピカピカ泥だんご作り！</p>
+                                            </div>
+                                        </div>
+                                        <div class="row ml-1">
+                                            <div class="col pt-1 pl-0">
+                                                <dl class="row">
+                                                    <dt class="col-3">時刻</dt>
+                                                    <dd class="col-9">20日/10:00～15:30</dd>
+                                                    <dt class="col-3"></dt>
+                                                    <dd class="col-9">21日/10:00～15:00</dd>
+                                                    <dt class="col-3">場所</dt>
+                                                    <dd class="col-9">社福棟プレイルーム隣園外広場</dd>
+                                                    <dt class="col-3">団体</dt>
+                                                    <dd class="col-9">どろんこ隊☆</dd>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <h2>3.リラクゼーションカフェ「てもみ屋」</h2>
+                                        <div class="row">
+                                            <div class="col">
+                                                <p>てもみ屋ではハンドマッサージをカフェ形式で行います。ドリンクやお菓子を用意していますので、ぜひいらしてください！</p>
+                                            </div>
+                                        </div>
+                                        <div class="row ml-1">
+                                            <div class="col pt-1 pl-0">
+                                                <dl class="row">
+                                                    <dt class="col-3">時刻</dt>
+                                                    <dd class="col-9">20日/10:00～17:00</dd>
+                                                    <dt class="col-3"></dt>
+                                                    <dd class="col-9">21日/10:00～16:00</dd>
+                                                    <dt class="col-3">場所</dt>
+                                                    <dd class="col-9">社福棟2F入口</dd>
+                                                    <dt class="col-3">団体</dt>
+                                                    <dd class="col-9">化粧ボランティアサークルKIPU*Labo</dd>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <h2>4.社会福祉体験</h2>
+                                        <div class="row">
+                                            <div class="col">
+                                                <p>社会福祉体験では、ハンディーキャップ体験や普段見ることのできない福祉情報機器を見ることができます。ぜひおいでください。</p>
+                                            </div>
+                                        </div>
+                                        <div class="row ml-1">
+                                            <div class="col pt-1 pl-0">
+                                                <dl class="row">
+                                                    <dt class="col-3">時刻</dt>
+                                                    <dd class="col-9">20日/10:00～17:00</dd>
+                                                    <dt class="col-3"></dt>
+                                                    <dd class="col-9">21日/10:00～16:00</dd>
+                                                    <dt class="col-3">場所</dt>
+                                                    <dd class="col-9">社福棟201講義室</dd>
+                                                    <dt class="col-3">団体</dt>
+                                                    <dd class="col-9">社会福祉学部学生会</dd>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <h2>5.おしゃべりカフェ</h2>
+                                        <div class="row">
+                                            <div class="col">
+                                                <p>おいしいお菓子・ドリンクを用意しています。みんなでお茶を飲みながら、楽しくおしゃべりしませんか？？？</p>
+                                            </div>
+                                        </div>
+                                        <div class="row ml-1">
+                                            <div class="col pt-1 pl-0">
+                                                <dl class="row">
+                                                    <dt class="col-3">時刻</dt>
+                                                    <dd class="col-9">20日/10:00～17:00</dd>
+                                                    <dt class="col-3"></dt>
+                                                    <dd class="col-9">21日/10:00～16:00</dd>
+                                                    <dt class="col-3">場所</dt>
+                                                    <dd class="col-9">社福棟2Fラウンジ・201演習室</dd>
+                                                    <dt class="col-3">団体</dt>
+                                                    <dd class="col-9">藤野ゼミ</dd>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <!--/社福棟2F-->
+                <!--体育棟2F-->
+                <div class="py-5">
+                    <section id="taiiku2">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col py-3">
+                                    <h3>体育棟2F</h3>
+                                </div>
+                            </div>
+                            <!--画像-->
+                            <div class="row">
+                                <div class="col text-center">
+                                    <img class="img-fluid" src="img/navi/taiiku2.png" alt="">
+                                </div>
+                            </div>
+                            <!-- 紹介文 -->
+                            <div class="py-3">
+                                <div class="row">
+
+                                    <div class="col-md-6">
+                                        <h2>1.バルーンプール</h2>
+                                        <div class="row">
+                                            <div class="col">
+                                                <p>たくさんのふうせんをつかった、プールであそびましょう！ちいさなおこさま、おおきなおこさま、おまちしております。</p>
+                                            </div>
+                                        </div>
+                                        <div class="row ml-1">
+                                            <div class="col pt-1 pl-0">
+                                                <dl class="row">
+                                                    <dt class="col-3">時刻</dt>
+                                                    <dd class="col-9">20日/10:00～16:00</dd>
+                                                    <dt class="col-3"></dt>
+                                                    <dd class="col-9">21日/10:00～16:00</dd>
+                                                    <dt class="col-3">場所</dt>
+                                                    <dd class="col-9">体育館入り口横</dd>
+                                                    <dt class="col-3">団体</dt>
+                                                    <dd class="col-9">バルーンアートサークル</dd>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <h2>2.ふぅくんマーケット</h2>
+                                        <div class="row">
+                                            <div class="col">
+                                                <p>大学祭名物のフリーマーケットです！今年もたくさんの方が出店してくださいました！ぜひ、掘り出し物を見つけに会場まで遊びに来てください★</p>
+                                            </div>
+                                        </div>
+                                        <div class="row ml-1">
+                                            <div class="col pt-1 pl-0">
+                                                <dl class="row">
+                                                    <dt class="col-3">時刻</dt>
+                                                    <dd class="col-9">20日/10:00～16:00</dd>
+                                                    <dt class="col-3"></dt>
+                                                    <dd class="col-9">21日/10:00～15:00</dd>
+                                                    <dt class="col-3">場所</dt>
+                                                    <dd class="col-9">アリーナ</dd>
+                                                    <dt class="col-3">団体</dt>
+                                                    <dd class="col-9">大学祭実行委員会</dd>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <!--/体育棟2F-->
+                <!--学生ホール棟2F-->
+                <div class="py-5">
+                    <section id="gakusei2">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col py-3">
+                                    <h3>学生ホール棟2F</h3>
+                                </div>
+                            </div>
+                            <!--画像-->
+                            <div class="row">
+                                <div class="col text-center">
+                                    <img class="img-fluid" src="img/navi/gakusei2F.png" alt="">
+                                </div>
+                            </div>
+                            <!-- 紹介文 -->
+                            <div class="py-3">
+                                <div class="row">
+
+                                    <div class="col-md-6">
+                                        <h2>1.アロニア福田パン販売</h2>
+                                        <div class="row">
+                                            <div class="col">
+                                                <p>盛岡特産のアロニアという珍しい果実を使った福田パンを販売しています。毎年皆さんに大変人気です。ぜひ今年もお越しください。</p>
+                                            </div>
+                                        </div>
+                                        <div class="row ml-1">
+                                            <div class="col pt-1 pl-0">
+                                                <dl class="row">
+                                                    <dt class="col-3">時刻</dt>
+                                                    <dd class="col-9">20日/10:00～17:00</dd>
+                                                    <dt class="col-3"></dt>
+                                                    <dd class="col-9">21日/10:00～16:00</dd>
+                                                    <dt class="col-3">場所</dt>
+                                                    <dd class="col-9">学生ホール棟入口</dd>
+                                                    <dt class="col-3">団体</dt>
+                                                    <dd class="col-9">ふくぱんだ</dd>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <h2>2.回進堂 羊羹販売</h2>
+                                        <div class="row">
+                                            <div class="col">
+                                                <p>総合政策学部と岩谷堂羊羹で有名な回進堂とコラボ！冬の新商品発売の前に既存の羊羹の魅力をお伝えします。ぜひお越しください！</p>
+                                            </div>
+                                        </div>
+                                        <div class="row ml-1">
+                                            <div class="col pt-1 pl-0">
+                                                <dl class="row">
+                                                    <dt class="col-3">時刻</dt>
+                                                    <dd class="col-9">20日/10:00～17:00</dd>
+                                                    <dt class="col-3"></dt>
+                                                    <dd class="col-9">21日/10:00～16:00</dd>
+                                                    <dt class="col-3">場所</dt>
+                                                    <dd class="col-9">学生ホール棟入口奥</dd>
+                                                    <dt class="col-3">団体</dt>
+                                                    <dd class="col-9">回進堂×総政</dd>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <h2>3.しまもぐプロジェクト</h2>
+                                        <div class="row">
+                                            <div class="col">
+                                                <p>沿岸地域支援のための寄付金つき文房具（ボールペン、蛍光ペン）を販売しています！ぜひお立ち寄りください！</p>
+                                            </div>
+                                        </div>
+                                        <div class="row ml-1">
+                                            <div class="col pt-1 pl-0">
+                                                <dl class="row">
+                                                    <dt class="col-3">時刻</dt>
+                                                    <dd class="col-9">20日/10:00～16:00</dd>
+                                                    <dt class="col-3"></dt>
+                                                    <dd class="col-9">21日/10:00～15:00</dd>
+                                                    <dt class="col-3">場所</dt>
+                                                    <dd class="col-9">学生ホール棟入口奥</dd>
+                                                    <dt class="col-3">団体</dt>
+                                                    <dd class="col-9">しまもぐプロジェクト</dd>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <h2>4.岩手沿岸応援フェア</h2>
+                                        <div class="row">
+                                            <div class="col">
+                                                <p>私たちは岩手県沿岸地域の企業様の商品を受託販売しています。食品や手作り小物に地域の人々の思いがたくさん詰まっています。</p>
+                                            </div>
+                                        </div>
+                                        <div class="row ml-1">
+                                            <div class="col pt-1 pl-0">
+                                                <dl class="row">
+                                                    <dt class="col-3">時刻</dt>
+                                                    <dd class="col-9">20日/10:00～17:00</dd>
+                                                    <dt class="col-3"></dt>
+                                                    <dd class="col-9">21日/10:00～16:00</dd>
+                                                    <dt class="col-3">場所</dt>
+                                                    <dd class="col-9">2F購買前</dd>
+                                                    <dt class="col-3">団体</dt>
+                                                    <dd class="col-9">復興girls＆boys*</dd>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <h2>5.学祭茶会</h2>
+                                        <div class="row">
+                                            <div class="col">
+                                                <p>午前10時から午後3時まで学生ホール棟で開催しています。美味しいお茶と和菓子といっしょにお待ちしております。</p>
+                                            </div>
+                                        </div>
+                                        <div class="row ml-1">
+                                            <div class="col pt-1 pl-0">
+                                                <dl class="row">
+                                                    <dt class="col-3">時刻</dt>
+                                                    <dd class="col-9">20日/10:00～15:00</dd>
+                                                    <dt class="col-3">場所</dt>
+                                                    <dd class="col-9">2F食堂前</dd>
+                                                    <dt class="col-3">団体</dt>
+                                                    <dd class="col-9">茶道部</dd>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <!--/学生ホール棟2F-->
+                <!--学生ホール棟2F-->
+                <div class="py-5">
+                    <section id="gakusei3">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col py-3">
+                                    <h3>学生ホール棟3F</h3>
+                                </div>
+                            </div>
+                            <!--画像-->
+                            <div class="row">
+                                <div class="col text-center">
+                                    <img class="img-fluid" src="img/navi/gakusei3F.png" alt="">
+                                </div>
+                            </div>
+                            <!-- 紹介文 -->
+                            <div class="py-3">
+                                <div class="row">
+
+                                    <div class="col-md-6">
+                                        <h2>6.軽音楽部大演奏会～鷲風祭編～</h2>
+                                        <div class="row">
+                                            <div class="col">
+                                                <p>音楽だけじゃ食べていけないし、バイトの賄いばかりの生活だけど、カタを付けて皆でビール飲もう。さぁバンドやろうぜ</p>
+                                            </div>
+                                        </div>
+                                        <div class="row ml-1">
+                                            <div class="col pt-1 pl-0">
+                                                <dl class="row">
+                                                    <dt class="col-3">時刻</dt>
+                                                    <dd class="col-9">20日/10:00～17:00</dd>
+                                                    <dt class="col-3"></dt>
+                                                    <dd class="col-9">21日/10:00～16:00</dd>
+                                                    <dt class="col-3">場所</dt>
+                                                    <dd class="col-9">3F集会室</dd>
+                                                    <dt class="col-3">団体</dt>
+                                                    <dd class="col-9">軽音楽部</dd>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <h2>7.蔵書リユース市</h2>
+                                        <div class="row">
+                                            <div class="col">
+                                                <p>除籍本を1冊100円で販売します。掘り出し物が見つかるかも！？ドーム型で開放感のある図書館も一般開放します！</p>
+                                            </div>
+                                        </div>
+                                        <div class="row ml-1">
+                                            <div class="col pt-1 pl-0">
+                                                <dl class="row">
+                                                    <dt class="col-3">時刻</dt>
+                                                    <dd class="col-9">20日/10:00～17:00</dd>
+                                                    <dt class="col-3"></dt>
+                                                    <dd class="col-9">21日/10:00～16:00</dd>
+                                                    <dt class="col-3">場所</dt>
+                                                    <dd class="col-9">3F風のモント</dd>
+                                                    <dt class="col-3">団体</dt>
+                                                    <dd class="col-9">岩手県立大学メディアセンター</dd>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <!--/学生ホール棟2F-->
+
+            </section>
+        </main>
+        <!-- /メイン -->
+        <!-- フッター -->
+        <footer class="py-4 bg-dark text-light px-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-6 mt-3">
+                        <h5 class="pb-1 mb-0 border-bottom">会場案内</h5>
+                        <ul>
+                            <li><a href="navi.html">校内マップ</a></li>
+                            <li><a href="mogi_navi.html">模擬店マップ</a></li>
+                            <li><a href="firstday.html">1日/両日イベント</a></li>
+                            <li><a href="secondday.html">2日イベント</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 col-6 mt-3">
+                        <h5 class="pb-1 mb-0 border-bottom">イベント一覧</h5>
+                        <ul>
+                            <li><a href="stage.html">合同タイムテーブル</a></li>
+                            <li><a href="gakunai.html">学内イベント</a></li>
+                            <li><a href="sousaku.html">創作イベント</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 col-6 mt-3">
+                        <h5 class="pb-1 mb-0 border-bottom">ご来場の方へ</h5>
+                        <ul>
+                            <li><a href="visitors.html">お知らせ/禁止事項</a></li>
+                            <li><a href="access.html">アクセス</a></li>
+                            <li><a href="contact.html">お問い合わせ</a></li>
+                            <li><a href="question.html">よくあるご質問</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 col-6 mt-3">
+                        <h5 class="pb-1 mb-0 border-bottom">参加者の方へ</h5>
+                        <ul>
+                            <li><a href="hurima.html">フリマ出店者の皆様</a></li>
+                            <li><a href="event_apply.html">ステージ/講堂<br>企画応募フォーム</a></li>
+                            <li><a href="gakunai&mogi.html">学内/模擬店出者の方へ</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 col-6 mt-3">
+                        <h5 class="pb-1 mb-0 border-bottom">その他</h5>
+                        <ul>
+                            <li><a href="syuhu.html">鷲風祭とは？</a></li>
+                            <li><a href="https://www.iwate-pu.ac.jp/" target="_blank">岩手県立大学公式HP</a></li>
+                            <li><a href="other.html">大学祭関係者様</a></li>
+                        </ul>
+                    </div>
+                    <div class="col d-md-none">
+
+                    </div>
+                </div>
+
+                <p class="text-center mb-0"><small>Copyright 2019, Festa Project Team. All rights reserved</small></p>
+
+            </div>
+        </footer>
+        <!-- /フッター -->
+        
+
+        <!--メニュー開閉ボタン-->
+        <div id="menubar_hdr" class="close"></div>
+        <!--メニューの開閉処理条件設定　1024px以下-->
+        <script>
+            if (OCwindowWidth() <= 1024) {
+                open_close("menubar_hdr", "headerBottom-s");
+            }
+        </script>
+
+        <!--bootstrap読み込み-->
+
+        <script src="js/bootstrap.bundle.min.js"></script>
+
+    </div>
+</body></html>

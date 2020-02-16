@@ -1,0 +1,967 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-89940209-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-89940209-1');
+
+    </script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!--CSS -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <!--js-->
+    <script src="js/openclose.js"></script>
+    <!--Font Awsome追加-->
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <!--jQUery-->
+    <script src="js/jquery-3.3.1.slim.min.js"></script>
+    <script src="js/jquery-1.6.min.js"></script>
+    　　
+    <!-- jQueryが共存するための対策。var1.6は「$16」で、var3.3.1は「$」で使用可能-->
+    <script type="text/javascript">
+        var $16 = $.noConflict(true);
+        //スマホ用メニュー画面の矢印
+        (function($) {
+            $(function() {
+                //メニューを最初に全て隠す
+                $("ul.menu1").hide();
+                //クリックされたときクリックした以外のメニューが開かれていた場合閉じる。また、現在開いているメニューをクリックした場合も隠す
+                $("div.category").click(function() {
+                    $("ul.menu1").slideUp();
+                    $("div.category").removeClass("open");
+                    //もしクリックしたところのcssがdisplay:none;のときshowを実行
+                    if ($("+ul", this).css("display") == "none") {
+                        $("+ul", this).slideDown();
+                        $(this).addClass("open")
+                    }
+                });
+            });
+        })($16);
+
+    </script>
+
+    <script>
+        //nav固定用
+        $(function() {
+            $(window).scroll(function() {
+
+                if ($(this).scrollTop() > 10) {
+                    $('#articles-scroll').addClass('is-fixed');
+                } else {
+                    $('#articles-scroll').removeClass('is-fixed');
+                }
+            });
+        });
+
+    </script>
+
+
+    <title>岩手県立大学 大学祭</title>
+</head>
+
+<body>
+    <!-- ヘッダー -->
+    <div class="wrap">
+        <header>
+            <div class="container-fluid ml-0 ml-xl-5 ml-lg-3 mb-md-3">
+                <a href="index.html"><img src="img/festalogo.png" class="img img-fluid" alt="festalogo"></a>
+                <div id="headerTop">
+                    <div class="headerTopT">
+                        <p>公式SNS</p>
+                        <a href="https://www.instagram.com/festa_iwate_pu/" target="_blank" class="insta_btn">
+                            <span class="insta">
+                                <i class="fab fa-instagram"></i>
+                            </span>
+                        </a>
+                        <a href="https://twitter.com/festa_iwate_pu" target="_blank" class="twitter_btn">
+                            <span class="twitter">
+                                <i class="fab fa-twitter"></i>
+                            </span>
+                        </a>
+                        <!--
+                      <a href="" class="line_btn">
+                          <span class="line">
+                              <i class="fab fa-line"></i>
+                          </span>
+                      </a>
+-->
+                    </div>
+                    <div class="headerTopB">
+                        <ul>
+                            <li><a href="contact.html">お問い合わせ</a></li>
+                            <li><a href="question.html">よくあるご質問</a></li>
+                        </ul>
+                        <!--検索フォーム作りかけ-->
+                        <!--
+                    <form action="/search-result/">
+                        <input id="search-input" placeholder="1つキーワードを入力" type="text" name="search-key">
+                        <input id="search-buttom" class="fas" type="submit" value="" method="get">
+                    </form>
+-->
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+        <!--メニューバー-->
+
+        <div id="articles-scroll">
+            <div id="menu_b">
+                <ul class="menu sticky-top" style="z-index: 100;">
+
+                    <li class="menu__mega">
+                        <div class="bg-primary">
+                            <a href="index.html"><i class="fas fa-home mr-xl-3"></i>ホーム</a>
+                        </div>
+                    </li>
+
+                    <li class="menu__mega">
+                        <i class="fas fa-map-marked-alt mr-xl-3"></i>会場案内<i class="fas fa-angle-down ml-xl-2"></i>
+                        <ul class="menu__second-level row">
+
+                            <li class="col-12 text-left ml-xl-5 ml-lg-3 my-3">
+                                <h2>●会場案内TOP</h2>
+                            </li>
+
+                            <li class="col-md-3">
+                                <div class="figure">
+                                    <a href="navi.html">
+                                        <img src="img/icon/konai_map.png" alt="" class="figure-img img-fluid">
+                                        <figcaption class="figure-caption subTxt">校内マップ</figcaption>
+                                    </a>
+                                </div>
+                            </li>
+
+                            <li class="col-md-3">
+                                <div class="figure">
+                                    <a href="mogi_navi.html">
+                                        <img src="img/icon/mogi_map.png" alt="" class="figure-img img-fluid">
+                                        <figcaption class="figure-caption subTxt">模擬店マップ</figcaption>
+                                    </a>
+                                </div>
+                            </li>
+
+                            <li class="col-md-3">
+                                <div class="figure">
+                                    <a href="firstday.html">
+                                        <img src="img/icon/1day.png" alt="" class="figure-img img-fluid">
+                                        <figcaption class="figure-caption subTxt">１日目/両日イベント</figcaption>
+                                    </a>
+                                </div>
+                            </li>
+
+                            <li class="col-md-3">
+                                <div class="figure">
+                                    <a href="secondday.html">
+                                        <img src="img/icon/2day.png" alt="" class="figure-img img-fluid">
+                                        <figcaption class="figure-caption subTxt">2日目イベント</figcaption>
+                                    </a>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <li class="menu__mega">
+                        <i class="far fa-calendar-check mr-xl-3"></i>イベント一覧<i class="fas fa-angle-down ml-xl-2"></i>
+                        <ul class="menu__second-level row">
+
+                            <li class="col-12 text-left ml-xl-5 ml-lg-3 my-3">
+                                <h2>●イベント一覧TOP</h2>
+                            </li>
+
+                            <li class="col-md-3">
+                                <div class="figure">
+                                    <a href="stage.html">
+                                        <img src="img/icon/timetable.png" alt="" class="figure-img img-fluid">
+                                        <figcaption class="figure-caption subTxt">合同タイムテーブル</figcaption>
+                                    </a>
+                                </div>
+                            </li>
+
+                            <li class="col-md-3">
+                                <div class="figure">
+                                    <a href="gakunai.html">
+                                        <img src="img/icon/gakunai.png" alt="" class="figure-img img-fluid">
+                                        <figcaption class="figure-caption subTxt">学内イベント</figcaption>
+                                    </a>
+                                </div>
+                            </li>
+
+                            <li class="col-md-3">
+                                <div class="figure">
+                                    <a href="sousaku.html">
+                                        <img src="img/icon/sousaku.png" alt="" class="figure-img img-fluid">
+                                        <figcaption class="figure-caption subTxt">創作イベント</figcaption>
+                                    </a>
+                                </div>
+                            </li>
+
+                            <!--
+                        <li class="col-md-3">
+                            <div class="figure">
+                                <a href="">
+                                    <img src="img/T_map.JPG" alt="" class="figure-img img-fluid">
+                                    <figcaption class="figure-caption subTxt">その他イベント</figcaption>
+                                </a>
+                            </div>
+                        </li>
+-->
+
+                        </ul>
+                    </li>
+
+                    <li class="menu__mega">
+                        <i class="fas fa-user mr-xl-3"></i>ご来場の方へ<i class="fas fa-angle-down ml-xl-2"></i>
+                        <ul class="menu__second-level row">
+
+                            <li class="col-12 text-left ml-xl-5 ml-lg-3 my-3">
+                                <h2>●ご来場の方へTOP</h2>
+                            </li>
+
+                            <li class="col-md-3">
+                                <div class="figure">
+                                    <a href="visitors.html">
+                                        <img src="img/icon/info.png" alt="" class="figure-img img-fluid">
+                                        <figcaption class="figure-caption subTxt">お知らせ/禁止事項</figcaption>
+                                    </a>
+                                </div>
+                            </li>
+
+                            <li class="col-md-3">
+                                <div class="figure">
+                                    <a href="access.html">
+                                        <img src="img/icon/acces.png" alt="" class="figure-img img-fluid">
+                                        <figcaption class="figure-caption subTxt">アクセス</figcaption>
+                                    </a>
+                                </div>
+                            </li>
+
+                            <li class="col-md-3">
+                                <div class="figure">
+                                    <a href="news.html">
+                                        <img src="img/icon/emargency.png" alt="" class="figure-img img-fluid">
+                                        <figcaption class="figure-caption subTxt">緊急情報</figcaption>
+                                    </a>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <li class="menu__mega">
+                        <i class="fas fa-store mr-xl-3"></i>参加者の方へ<i class="fas fa-angle-down ml-xl-2"></i>
+                        <ul class="menu__second-level row">
+
+                            <li class="col-12 text-left ml-xl-5 ml-lg-3 my-3">
+                                <h2>●参加者の方へTOP</h2>
+                            </li>
+
+                            <li class="col-md-3">
+                                <div class="figure">
+                                    <a href="hurima.html">
+                                        <img src="img/icon/hurima.png" alt="" class="figure-img img-fluid">
+                                        <figcaption class="figure-caption subTxt">フリマ出店者の方へ</figcaption>
+                                    </a>
+                                </div>
+                            </li>
+
+                            <li class="col-md-3">
+                                <div class="figure">
+                                    <a href="event_apply.html">
+                                        <img src="img/icon/stage.png" alt="" class="figure-img img-fluid">
+                                        <figcaption class="figure-caption subTxt">ステージ/講堂応募フォーム</figcaption>
+                                    </a>
+                                </div>
+                            </li>
+
+                            <li class="col-md-3">
+                                <div class="figure">
+                                    <a href="gakunai&mogi.html">
+                                        <img src="img/icon/gakunai&mogi.png" alt="" class="figure-img img-fluid">
+                                        <figcaption class="figure-caption subTxt">学内/模擬店出者の方へ</figcaption>
+                                    </a>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <li class="menu__mega">
+                        <i class="fas fa-question-circle mr-xl-3"></i>その他<i class="fas fa-angle-down ml-xl-2"></i>
+                        <ul class="menu__second-level row">
+
+                            <li class="col-12 text-left ml-xl-5 ml-lg-3 my-3">
+                                <h2>●参加者の方へTOP</h2>
+                            </li>
+
+                            <li class="col-md-3">
+                                <div class="figure">
+                                    <a href="syuhu.html">
+                                        <img src="img/icon/syuhu.png" alt="" class="figure-img img-fluid">
+                                        <figcaption class="figure-caption subTxt">鷲風祭とは？</figcaption>
+                                    </a>
+                                </div>
+                            </li>
+
+                            <li class="col-md-3">
+                                <div class="figure">
+                                    <a href="https://www.iwate-pu.ac.jp/" target="_blank">
+                                        <img src="img/icon/IPU.png" alt="" class="figure-img img-fluid">
+                                        <figcaption class="figure-caption subTxt">岩手県立大学公式HP</figcaption>
+                                    </a>
+                                </div>
+                            </li>
+
+                            <li class="col-md-3">
+                                <div class="figure">
+                                    <a href="other.html">
+                                        <img src="img/icon/univ.png" alt="" class="figure-img img-fluid">
+                                        <figcaption class="figure-caption subTxt">大学祭関係者様</figcaption>
+                                    </a>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+
+
+        <!--md以下メニューバー-->
+
+        <nav id="headerBottom-s">
+            <ul class="navi">
+
+                <li>
+                    <a href="index.html">
+                        <div class="category" id="fes"><i class="fas fa-home mr-3 fa-fw"></i>ホーム</div>
+                    </a>
+                </li>
+
+
+                <li>
+                    <div class="category"><i class="fas fa-map-marked-alt mr-3 fa-fw"></i>会場マップ</div>
+                    <ul class="menu1">
+                        <li><a href="navi.html">校内マップ</a></li>
+                        <li><a href="mogi_navi.html">模擬店マップ</a></li>
+                        <li><a href="firstday.html">1日/両日イベント</a></li>
+                        <li><a href="secondday.html">2日イベント</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <div class="category"><i class="far fa-calendar-check mr-3 fa-fw"></i>イベント一覧</div>
+                    <ul class="menu1">
+                        <li><a href="stage.html">合同タイムテーブル</a></li>
+                        <li><a href="gakunai.html">学内イベント</a></li>
+                        <li><a href="sousaku.html">創作イベント</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <div class="category"><i class="fas fa-user mr-3 fa-fw"></i>ご来場の方へ</div>
+                    <ul class="menu1">
+                        <li><a href="visitors.html">お知らせ・禁止事項</a></li>
+                        <li><a href="access.html">アクセス</a></li>
+                        <li><a href="news.html">緊急情報</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <div class="category"><i class="fas fa-store mr-3 fa-fw"></i>参加者の方へ</div>
+                    <ul class="menu1">
+                        <li><a href="hurima.html">フリマ出店者の方へ</a></li>
+                        <li><a href="event_apply.html">ステージ/講堂応募フォーム</a></li>
+                        <li><a href="gakunai&mogi.html">学内/模擬店出店者の方へ</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <div class="category"><i class="fas fa-question-circle mr-3 fa-fw"></i>その他</div>
+                    <ul class="menu1">
+                        <li><a href="syuhu.html">鷲風祭とは？</a></li>
+                        <li><a href="https://www.iwate-pu.ac.jp/" target="_blank">岩手県立大学公式HP</a></li>
+                        <li><a href="other.html">大学祭関係者様</a></li>
+                    </ul>
+                </li>
+
+
+                <li>
+                    <a href="contact.html">
+                        <div class="categoryU">お問い合わせ</div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="question.html">
+                        <div class="categoryU">よくあるご質問</div>
+                    </a>
+                </li>
+
+                <li>
+                    <div class="categorySNS">
+                        <p class="py-2">公式SNS</p>
+                        <a href="https://www.instagram.com/festa_iwate_pu/" target="_blank" class="insta_btn">
+                            <span class="insta">
+                                <i class="fab fa-instagram"></i>
+                            </span>
+                        </a>
+                        <a href="https://twitter.com/festa_iwate_pu" target="_blank" class="twitter_btn">
+                            <span class="twitter">
+                                <i class="fab fa-twitter"></i>
+                            </span>
+                        </a>
+                        <!--
+                            <a href="" class="line_btn">
+                                <span class="line">
+                                    <i class="fab fa-line"></i>
+                                </span>
+                            </a>
+-->
+                    </div>
+                </li>
+
+            </ul>
+        </nav>
+
+        <!--メニューバー-->
+        <!-- /ヘッダー -->
+
+        <!-- メイン -->
+        <main>
+            <!--メインビジュアル(PC)-->
+            <div class="mt-3 mt-md-0 d-md-block d-none">
+                <section id="topics">
+                    <!-- カルーセル外枠 -->
+                    <div id="main_visual" class="carousel slide" data-ride="carousel">
+                        <!-- インジケーター -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#main_visual" data-slide-to="0" class="active"></li>
+                            <li data-target="#main_visual" data-slide-to="1"></li>
+
+                        </ol>
+                        <!-- / インジケーター -->
+                        <!-- カルーセル内枠 -->
+                        <div class="carousel-inner">
+                            <!-- スライド01 -->
+                            <div class="carousel-item active">
+                                <a href="index.html">
+                                    <img class="img-fluid" src="img/carousel/TOP.png" alt="" style="width:100%">
+                                </a>
+                            </div>
+                            <!-- / スライド01 -->
+                            <!-- スライド02 -->
+                            <div class="carousel-item">
+                                <a href="syuhu.html">
+                                    <img class="img-fluid" src="img/carousel/Thema.png" alt="" style="width:100%">
+                                </a>
+                            </div>
+                            <!-- / スライド02 -->
+                            <!-- スライド03 -->
+
+                            <!-- / スライド03 -->
+                        </div>
+                        <!-- / カルーセル内枠 -->
+                        <!-- コントローラー -->
+                        <a class="carousel-control-prev" href="#main_visual" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        </a>
+                        <a class="carousel-control-next" href="#main_visual" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        </a>
+                        <!-- / コントローラー -->
+                    </div>
+                    <!-- / カルーセル外枠 -->
+                </section>
+            </div>
+
+            <!-- / メインビジュアル(PC) -->
+            
+
+            <!--メインビジュアル(スマホ)-->
+            <div class="mt-3 mb-4 mt-md-0 d-sm-block d-md-none">
+                <section id="topics-s">
+                    <!-- カルーセル外枠 -->
+                    <div id="main_visual-s" class="carousel slide" data-ride="carousel">
+                        <!-- インジケーター -->
+
+                        <ol class="carousel-indicators">
+                            <li data-target="#main_visual-s" data-slide-to="0" class="active"></li>
+                            <li data-target="#main_visual-s" data-slide-to="1"></li>
+
+                        </ol>
+
+                        <!-- / インジケーター -->
+                        <!-- カルーセル内枠 -->
+                        <div class="carousel-inner">
+                            <!-- スライド01 -->
+                            <div class="carousel-item active">
+                                <a href="index.html">
+                                    <img class="img-fluid" src="img/carousel-s/TOP-s.png" alt="鷲風祭">
+                                </a>
+                            </div>
+                            <!-- / スライド01 -->
+                            <!-- スライド02 -->
+                            <div class="carousel-item">
+                                <a href="syuhu.html">
+                                    <img class="img-fluid" src="img/carousel-s/Thema-s.png" alt="テーマ">
+                                </a>
+                            </div>
+                            <!-- / スライド02 -->
+                            <!-- スライド03 -->
+
+                            <!-- / スライド03 -->
+                        </div>
+                        <!-- / カルーセル内枠 -->
+                        <!-- コントローラー -->
+                        <a class="carousel-control-prev" href="#main_visual-s" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        </a>
+                        <a class="carousel-control-next" href="#main_visual-s" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        </a>
+                        <!-- / コントローラー -->
+                    </div>
+                    <!-- / カルーセル外枠 -->
+                </section>
+            </div>
+
+            <!-- / メインビジュアル -->
+
+<!--
+            <div class="container">
+                <div class="row my-3">
+                    <div class="col-12 text-center">
+                        <a href="https://syuhusai.app.push7.jp/" class="btn-gradient-3d-orange" target="_blank">
+                            <p>学祭当日の最新情報をpush通知で受け取る<i class="far fa-arrow-alt-circle-right ml-2"></i></p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+-->
+
+
+            <!-- コンテンツ01 -->
+            <div class="py-4">
+                <section id="news">
+                    <div class="container">
+                        <div class="mx-md-2 px-md-1 py-3">
+                            <div class="row">
+                                <!-- タイトル -->
+                                <div class="col">
+                                    <h3>お知らせ</h3>
+                                </div>
+                            </div>
+                            <!-- 中身 -->
+                            <div class="col pt-4 pl-0">
+                                <dl class="row">
+                                    <!--1項目-->
+                                    <dt class="col-md-3">2019年8月10日</dt>
+                                    <dd class="col-md-9"><a href="hurima.html">フリマ募集要項掲載しました。(応募期間は8/12からです。期間外の受付は無効となりますのでご了承ください。)</a></dd>
+                                    <!--/1項目-->
+                                    <!--2項目-->
+                                    <dt class="col-md-3">2019年8月10日</dt>
+                                    <dd class="col-md-9"><a href="index.html">サイトリニューアルしました！</a></dd>
+                                    <!--/2項目-->
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <!-- /コンテンツ01 -->
+            <!-- コンテンツ02 -->
+            <div class="py-4">
+                <section id="mainEvent">
+                    <div class="row text-center">
+
+                        <div class="col-md-4 col-6 px-0">
+                            <!--カードの枠-->
+                            <div class="card border-0">
+                                <a href="navi.html"><img class="card-img" src="img/index_content/kounai.JPG">
+                                    <div class="card-img-overlay d-flex flex-column p-0 border-0">
+                                        <div class="card-footer title mt-auto py-2 pl-4 pr-2 px-md-0">校内マップ</div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!--/カードの枠-->
+                        </div>
+
+                        <div class="col-md-4 col-6 px-0">
+                            <!--カードの枠-->
+                            <div class="card border-0">
+                                <a href="mogi_navi.html">
+                                    <img class="card-img" src="img/index_content/mogi.JPG">
+                                    <div class="card-img-overlay d-flex flex-column p-0">
+                                        <div class="card-footer title mt-auto py-2 pl-0 pr-2 px-md-0">模擬店マップ</div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!--/カードの枠-->
+                        </div>
+
+                        <div class="col-md-4 col-6 px-0">
+                            <!--カードの枠-->
+                            <div class="card border-0">
+                                <a href="stage.html">
+                                    <img class="card-img" src="img/index_content/timetable.JPG">
+                                    <div class="card-img-overlay d-flex flex-column p-0">
+                                        <div class="card-footer title mt-auto py-2 pl-4 pr-2 px-md-0">合同タイムテーブル</div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!--/カードの枠-->
+                        </div>
+
+                        <div class="col-md-4 col-6 px-0">
+                            <!--カードの枠-->
+                            <div class="card border-0">
+                                <a href="gakunai.html">
+                                    <img class="card-img" src="img/index_content/oc.jpg">
+                                    <div class="card-img-overlay d-flex flex-column p-0">
+                                        <div class="card-footer title mt-auto py-2 pl-0 pr-2 px-md-0">学内イベント</div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!--/カードの枠-->
+                        </div>
+
+                        <div class="col-md-4 col-6 px-0">
+                            <!--カードの枠-->
+                            <div class="card border-0">
+                                <a href="sousaku.html">
+                                    <img class="card-img" src="img/index_content/biggest.jpg">
+                                    <div class="card-img-overlay d-flex flex-column p-0">
+                                        <div class="card-footer title mt-auto py-2 pl-4 pr-2 px-md-0">創作イベント</div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!--/カードの枠-->
+                        </div>
+
+                        <div class="col-md-4 col-6 px-0">
+                            <!--カードの枠-->
+                            <div class="card border-0">
+                                <a href="visitors.html">
+                                    <img class="card-img" src="img/index_content/info.png">
+                                    <div class="card-img-overlay d-flex flex-column p-0">
+                                        <div class="card-footer title mt-auto py-2 pl-0 pr-2 px-md-0">お知らせ</div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!--/カードの枠-->
+                        </div>
+                        <!--</div>-->
+                    </div>
+                </section>
+            </div>
+            <!-- /コンテンツ02 -->
+            <!-- コンテンツ03 -->
+            <div class="py-4">
+                <section id="news">
+                    <div class="container">
+                        <div class="mx-md-2 px-md-1 py-3">
+                            <div class="row">
+                                <!-- 左側カラム（画面幅md以上） -->
+                                <div class="col">
+                                    <h3>更新情報</h3>
+                                </div>
+                            </div>
+                            <!-- 右側カラム（画面幅md以上） -->
+                            <div class="col pt-4 pl-0">
+                                <dl class="row">
+                                    <!--項目１-->
+                                    <dt class="col-md-3">2019年8月10日</dt>
+                                    <dd class="col-md-9"><a href="syuhu.html">今年度大学祭のテーマ決定！</a></dd>
+                                    <!--/項目１-->
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <!-- /コンテンツ03 -->
+
+            <!-- コンテンツ04 -->　　　
+            <!--個々の文章は表示の際に2行になるように調整してください。-->
+            <div class="py-4">
+                <section id="Hotevent">
+                    <div class="container">
+                        <!--                <div class="row">-->
+                        <div class="pt-4 mb-1 text-center">
+                            <h3>目玉イベント</h3>
+                            <p class="mr-4">※昨年度</p>
+                        </div>
+                        <div class="row card-deck mt-2">
+
+                            <div class="col-lg-6 px-5 py-4">
+                                <div class="card shadow">
+                                    <img class="card-img img-fluid" src="img/index_Hotevent/artist.png">
+                                    <div class="p-3" style="background:#fff7ee">
+                                        <h5 class="card-title mb-0">アーティストライブ</h5>
+                                        <p class="card-title">a crowd of rebelionによるフリーライブ開催！！熱いライブを見逃すな！</p>
+                                        <button type="button" class="btn" onclick="location.href='secondday.html#artist'" style="width:100%; background:#0582ff; color:white;">詳しく見る</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 px-5 py-4">
+                                <div class="card shadow">
+                                    <img class="card-img img-fluid" src="img/index_Hotevent/hurima.JPG">
+                                    <div class="p-3" style="background:#fff7ee">
+                                        <h5 class="card-title mb-0">ふぅくんマーケット</h5>
+                                        <p class="card-title">格安掘り出し物が見つかるかも・・・。今年も開催！県大フリーマーケット！</p>
+                                        <button type="button" class="btn" onclick="location.href='firstday.html#hurima'" style="width:100%; background:#0582ff; color:white;">詳しく見る</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 px-5 py-4">
+                                <div class="card shadow">
+                                    <img class="card-img img-fluid" src="img/index_Hotevent/obake.png">
+                                    <div class="p-3" style="background:#fff7ee">
+                                        <h5 class="card-title mb-0">お化け屋敷</h5>
+                                        <p class="card-title">今年のテーマは戦慄の廃校！どんなギミックが待っているのでしょうか・・・？？</p>
+                                        <button type="button" class="btn" onclick="location.href='firstday.html#obake'" style="width:100%; background:#0582ff; color:white;">詳しく見る</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 px-5 py-4">
+                                <div class="card shadow">
+                                    <img class="card-img img-fluid" src="img/index_Hotevent/ganriser.jpg">
+                                    <div class="p-3" style="background:#fff7ee">
+                                        <h5 class="card-title mb-0">ガンライザーショー</h5>
+                                        <p class="card-title">ご当地ヒーローガンライザーにあえるチャンス！握手や記念撮影もできるよ！</p>
+                                        <button type="button" class="btn" onclick="location.href='secondday.html#ganrizer'" style="width:100%; background:#0582ff; color:white;">詳しく見る</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 px-5 py-4">
+                                <div class="card shadow">
+                                    <img class="card-img img-fluid" src="img/index_Hotevent/marika_panhu.png">
+                                    <div class="p-3" style="background:#fff7ee">
+                                        <h5 class="card-title mb-0">Let'sマリオカート</h5>
+                                        <p class="card-title">県大マリカーNo1は誰の手に・・？大画面での熱いカーチェイスをぜひその目で！</p>
+                                        <button a="" type="button" class="btn" onclick="location.href='secondday.html#kodo1'" style="width:100%; background:#0582ff; color:white;">詳しく見る</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 px-5 py-4">
+                                <div class="card shadow">
+                                    <img class="card-img img-fluid" src="img/index_Hotevent/GF_illust.png">
+                                    <div class="p-3" style="background:#fff7ee">
+                                        <h5 class="card-title mb-0">グランドフィナーレ</h5>
+                                        <p class="card-title">抽選会や花火など豪華企画が目白押し！！1等は今年も高額商品か？？？？</p>
+                                        <button type="button" class="btn" onclick="location.href='secondday.html#GF'" style="width:100%; background:#0582ff; color:white;">詳しく見る</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!--            </div>-->
+                </section>
+            </div>
+            <!-- /コンテンツ04 -->
+            <!-- コンテンツ05 -->
+            <div class="bg py-4">
+                <section id="acsess">
+                    <div class="container">
+                        <div class="mx-md-2 px-md-1">
+                            <div class="row">
+                                <div class="col mb-1 px-3">
+                                    <h3>詳細情報</h3>
+                                </div>
+                            </div>
+                            <div class="row mt-4">
+                                <div class="col-lg-6">
+                                    <section id="Unv">
+                                        <h5 class="mb-3">●University</h5>
+                                        <table class="table table-hover">
+                                            <tbody>
+                                                <tr>
+                                                    <th>大学名</th>
+                                                    <td>岩手県立大学</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>住所</th>
+                                                    <td>岩手県滝沢市巣子152-52</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>電話<br class="visible-sm d-md-none">番号</th>
+                                                    <td>019-694-2028</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>開催日</th>
+                                                    <td>11/2～11/3</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>開催<br class="visible-sm d-md-none">時刻</th>
+                                                    <td>11/2：10:00～16:00<br>
+                                                        11/3：10:00～17:30</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>その他</th>
+                                                    <td>駐車場あり<br>
+                                                        ペット不可<br>
+                                                        飲酒/喫煙不可</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </section>
+                                </div>
+                                <!--地図-->
+                                <div class="col-lg-6">
+                                    <section id="map">
+                                        <h4 class="mb-3">●Map</h4>
+                                        <div class="embed-responsive embed-responsive-4by3">
+                                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3065.2032710178264!2d141.13579476496943!3d39.80243197944127!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x488cc78bf3e4641!2z5bKp5omL55yM56uL5aSn5a2mIOa7neayouOCreODo-ODs-ODkeOCuQ!5e0!3m2!1sja!2sjp!4v1555500563366!5m2!1sja!2sjp" width="800" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+                                        </div>
+                                        <p>※滝沢駅から徒歩20分(1.1km)</p>
+                                    </section>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <!-- /コンテンツ05 -->
+            
+            <div class="py-5">
+                <section id="ad">
+                    <div class="container">
+                        <div class="mx-md-2 px-md-1 py-3">
+
+                            <div class="row">
+                                <div class="col">
+                                    <h3>広告</h3>
+                                </div>
+                            </div>
+
+                           
+                            <div class="row mt-4">
+                               
+                                <!--画像1-->
+                                <div class="col-4">
+                                    <a href="http://iwatenextgene.com/" target="_blank">
+                                    <img class="img-fluid" src="img/ad/NexJene.jpg" alt="">
+                                    </a>
+                                </div>
+                                <!--/画像1-->
+                                
+                                
+                            </div>
+                            
+
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+        </main>
+        <!-- /メイン -->
+        <!-- フッター -->
+        <footer class="py-4 bg-dark text-light px-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-6 mt-3">
+                        <h5 class="pb-1 mb-0 border-bottom">会場案内</h5>
+                        <ul>
+                            <li><a href="navi.html">校内マップ</a></li>
+                            <li><a href="mogi_navi.html">模擬店マップ</a></li>
+                            <li><a href="firstday.html">1日/両日イベント</a></li>
+                            <li><a href="secondday.html">2日イベント</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 col-6 mt-3">
+                        <h5 class="pb-1 mb-0 border-bottom">イベント一覧</h5>
+                        <ul>
+                            <li><a href="stage.html">合同タイムテーブル</a></li>
+                            <li><a href="gakunai.html">学内イベント</a></li>
+                            <li><a href="sousaku.html">創作イベント</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 col-6 mt-3">
+                        <h5 class="pb-1 mb-0 border-bottom">ご来場の方へ</h5>
+                        <ul>
+                            <li><a href="visitors.html">お知らせ/禁止事項</a></li>
+                            <li><a href="access.html">アクセス</a></li>
+                            <li><a href="contact.html">お問い合わせ</a></li>
+                            <li><a href="question.html">よくあるご質問</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 col-6 mt-3">
+                        <h5 class="pb-1 mb-0 border-bottom">参加者の方へ</h5>
+                        <ul>
+                            <li><a href="hurima.html">フリマ出店者の皆様</a></li>
+                            <li><a href="event_apply.html">ステージ/講堂<br>企画応募フォーム</a></li>
+                            <li><a href="gakunai&mogi.html">学内/模擬店出者の方へ</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 col-6 mt-3">
+                        <h5 class="pb-1 mb-0 border-bottom">その他</h5>
+                        <ul>
+                            <li><a href="syuhu.html">鷲風祭とは？</a></li>
+                            <li><a href="https://www.iwate-pu.ac.jp/" target="_blank">岩手県立大学公式HP</a></li>
+                            <li><a href="other.html">大学祭関係者様</a></li>
+                        </ul>
+                    </div>
+                    <div class="col d-md-none">
+
+                    </div>
+                </div>
+
+                <p class="text-center mb-0"><small>Copyright 2019, Festa Project Team. All rights reserved</small></p>
+
+            </div>
+        </footer>
+        <!-- /フッター -->
+
+
+        <!--メニュー開閉ボタン-->
+        <div id="menubar_hdr" class="close"></div>
+        <!--メニューの開閉処理条件設定　1024px以下-->
+        <script>
+            if (OCwindowWidth() <= 1024) {
+                open_close("menubar_hdr", "headerBottom-s");
+            }
+
+        </script>
+
+        <!--bootstrap読み込み-->
+
+        <script src="js/bootstrap.bundle.min.js"></script>
+
+    </div>
+<!--
+    <script src="https://sdk.push7.jp/v2/p7sdk.js"></script>
+    <script>
+        p7.init("9385c21691644b4e8f679db58d91bd9e");
+    </script>
+-->
+</body>
+
+</html>
